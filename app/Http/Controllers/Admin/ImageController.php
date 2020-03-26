@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -15,7 +16,8 @@ class ImageController extends Controller
      */
     public function index()
     {
-        //
+        $images = Image::all();
+        return view('image.index', compact('images'));
     }
 
     /**
@@ -25,7 +27,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
+        return view('image.create');
     }
 
     /**
@@ -36,7 +38,12 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $file = $request->file('image');
+        $storage = Storage::putFile('public', $file);
+
+        // ddd($file->hashName());
+        Image::create(['src' => $file->hashName()]);
     }
 
     /**
@@ -58,7 +65,7 @@ class ImageController extends Controller
      */
     public function edit(Image $image)
     {
-        //
+        return view('image.edit', compact('image'));
     }
 
     /**
@@ -70,7 +77,10 @@ class ImageController extends Controller
      */
     public function update(Request $request, Image $image)
     {
-        //
+        Storage::delete($image->src);
+        $fileName = Storage::putFile('public/img' . $request->file('image'));
+        $image->src = $request->file('image')->hashName();
+        $image->save();
     }
 
     /**
@@ -81,6 +91,8 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
-        //
+        $storage = Storage::delete($image->src);
+        ddd($storage);
+        $image->delete();
     }
 }
