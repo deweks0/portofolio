@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Image;
 use App\Page;
 use Illuminate\Http\Request;
 
@@ -77,10 +78,30 @@ class PageController extends Controller
     public function update(Request $request, Page $page)
     {
         $rules = $request->validate([
-            'left_description' => 'required',
-            'right_description' => 'required'
+            'left_description' => 'required'
         ]);
+
         $page->update($rules);
+
+        return back();
+    }
+
+    public function updateImage()
+    {
+        $page = Page::find(10);
+
+        $page->images()->sync(request('images'));
+
+        return redirect(route('pages.about'));
+    }
+
+    public function deleteImage()
+    {
+        $page = Page::find(10);
+
+        $page->images()->detach(request('images'));
+
+        return redirect(route('pages.about'));
     }
 
     /**
@@ -92,5 +113,34 @@ class PageController extends Controller
     public function destroy(Page $page)
     {
         $page->delete();
+    }
+
+    public function about()
+    {
+        $page = Page::find(10);
+
+        return view('page.show_main', compact('page'));
+    }
+
+    public function chooseImage()
+    {
+        $page = Page::find(10);
+        $images = Image::all();
+
+        return view('page.choose_image', compact('images', 'page'));
+    }
+
+    public function news()
+    {
+        $page = Page::find(11);
+
+        return view('page.show_main', compact('page'));
+    }
+
+    public function inquiries()
+    {
+        $page = Page::find(12);
+
+        return view('page.show_main', compact('page'));
     }
 }

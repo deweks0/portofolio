@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-	return view('welcome');
-});
+Route::get('/', 'AppController@index');
+Route::get('/about-lab', 'AppController@about');
+Route::get('/news-update', 'AppController@news');
+Route::get('/inquiries', 'AppController@inquiries');
+Route::get('/project-{page}', 'AppController@detailProject');
 
 Auth::routes();
 
@@ -30,8 +32,11 @@ Route::prefix('admin')->namespace('Admin')->middleware(['auth'])->group(function
 	Route::get('/home', 'HomeController@index')->name('home');
 
 	Route::resource('/images', 'ImageController');
-	Route::resource('/pages', 'pageController');
-	Route::get('/page/detail', 'PageImageController@detail')->name('detail');
-	Route::get('/page/about', 'PageImageController@about')->name('about');
-	Route::put('/page/updateimage/{image}', 'PageImageController@UpdateImage')->name('imageUpdate');
+	Route::resource('/pages', 'PageController');
+	Route::get('/pages/main/about', 'PageController@about')->name('pages.about');
+	Route::get('/pages/main/about/choose-image', 'PageController@chooseImage')->name('pages.choose_image');
+	Route::post('/pages/main/about', 'PageController@updateImage')->name('pages.update_image');
+	Route::delete('/pages/main/about', 'PageController@deleteImage')->name('pages.delete_image');
+	Route::get('/pages/main/news-update', 'PageController@news')->name('pages.news');
+	Route::get('/pages/main/inquiries', 'PageController@inquiries')->name('pages.inquiries');
 });

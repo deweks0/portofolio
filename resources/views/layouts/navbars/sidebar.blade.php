@@ -91,31 +91,35 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button"
-                        aria-expanded="true" aria-controls="navbar-examples">
+                    <a class="nav-link" href="#navbar-1" data-toggle="collapse" role="button" aria-expanded="true"
+                        aria-controls="navbar-1">
                         <i class="ni ni-ungroup text-red"></i>
-                        Pages
+                        Main Pages
                     </a>
 
-                    <div class="collapse show" id="navbar-examples">
+                    <div class="collapse show" id="navbar-1">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link {{ request()->is('admin/pages/main/index') ? 'active' : '' }}"
+                                    href="#">
                                     Index
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link {{ request()->is('admin/pages/main/about') ? 'active' : '' }}"
+                                    href="{{ route('pages.about') }}">
                                     About
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link {{ request()->is('admin/pages/main/inquiries') ? 'active' : '' }}"
+                                    href="{{ route('pages.inquiries') }}">
                                     Inquiries
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link {{ request()->is('admin/pages/main/news-update') ? 'active' : '' }}"
+                                    href="{{ route('pages.news') }}">
                                     News
                                 </a>
                             </li>
@@ -124,11 +128,31 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('images.index') }}">
-                        <i class="ni ni-image text-orange"></i> Image Assets
+                    <a class="nav-link " href="#navbar-2" data-toggle="collapse" role="button" aria-expanded="true"
+                        aria-controls="navbar-2">
+                        <i class="ni ni-ungroup text-orange"></i>
+                        Project Pages
                     </a>
+
+                    <div class="collapse show" id="navbar-2">
+                        <ul class="nav nav-sm flex-column">
+                            @for ($i = 1; $i <= 8; $i++) <li class="nav-item">
+                                <a class="nav-link {{ request()->is('admin/pages/'.$i) ? 'active' : '' }}"
+                                    href="{{ route('pages.show', $i) }}">
+                                    Project {{ $i }}
+                                </a>
                 </li>
+                @endfor
             </ul>
         </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link {{ request()->is('admin/images') ? 'active' : '' }}" href="{{ route('images.index') }}">
+                <i class="ni ni-image text-info"></i> Image Assets
+            </a>
+        </li>
+        </ul>
+    </div>
     </div>
 </nav>
