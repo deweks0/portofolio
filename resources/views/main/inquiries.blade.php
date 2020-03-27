@@ -1,4 +1,4 @@
-@extends('main.app')
+@extends('main.app', ['title' => 'INQUIRIES'])
 
 @section('content')
 <div class="container-fluid h-100v d-flex flex-column">

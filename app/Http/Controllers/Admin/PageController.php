@@ -16,8 +16,9 @@ class PageController extends Controller
      */
     public function index()
     {
-        $pages = Page::all();
-        return view('page.index', compact('pages'));
+        $page = Page::find(10);
+
+        return view('page.show_index', compact('page'));
     }
 
     /**
@@ -88,7 +89,7 @@ class PageController extends Controller
 
     public function updateImage()
     {
-        $page = Page::find(10);
+        $page = Page::find(11);
 
         $page->images()->sync(request('images'));
 
@@ -97,7 +98,7 @@ class PageController extends Controller
 
     public function deleteImage()
     {
-        $page = Page::find(10);
+        $page = Page::find(11);
 
         $page->images()->detach(request('images'));
 
@@ -117,14 +118,14 @@ class PageController extends Controller
 
     public function about()
     {
-        $page = Page::find(10);
+        $page = Page::find(11);
 
         return view('page.show_main', compact('page'));
     }
 
     public function chooseImage()
     {
-        $page = Page::find(10);
+        $page = Page::find(11);
         $images = Image::all();
 
         return view('page.choose_image', compact('images', 'page'));
@@ -132,15 +133,35 @@ class PageController extends Controller
 
     public function news()
     {
-        $page = Page::find(11);
+        $page = Page::find(12);
 
         return view('page.show_main', compact('page'));
     }
 
     public function inquiries()
     {
-        $page = Page::find(12);
+        $page = Page::find(13);
 
         return view('page.show_main', compact('page'));
+    }
+
+    public function createProjectDetail(Page $page)
+    {
+        $images = Image::all();
+
+        return view('page.create_project_detail', compact('page', 'images'));
+    }
+
+    public function storeProjectDetail(Page $page)
+    {
+        $data = request()->validate([
+            'image_id' => 'required',
+            'left_description' => 'required',
+            'right_description' => 'required',
+        ]);
+
+        $page->projectDetails()->create($data);
+
+        return redirect(route('pages.show', $page));
     }
 }

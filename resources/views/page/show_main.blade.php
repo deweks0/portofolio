@@ -31,13 +31,13 @@
                     </div>
                     @endif
 
-                    <form action="{{ route('pages.update', $page->id) }}" method="POST">
+                    <form action="{{ route('pages.update', $page->id) }}" method="POST" class="border card-body">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
                             <label for="description">Description</label>
                             <textarea name="description" id="description" class="form-control" cols="30"
-                                rows="5">{{ $page->description }}</textarea>
+                                rows="15">{{ $page->description }}</textarea>
                         </div>
                         @if ($page->id == 10)
                         <div class="form-group">

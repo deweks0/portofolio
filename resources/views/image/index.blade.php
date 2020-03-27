@@ -35,13 +35,14 @@
                                     <i class="fas fa-ellipsis-v"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                    <form id="delete-image" action="{{ route('images.destroy', $image) }}" method="POST"
+                                    <form id="delete-image-{{$image->id}}"
+                                        action="{{ route('images.destroy', $image) }}" method="POST"
                                         style="display: none;">
                                         @csrf
                                         @method('DELETE')
                                     </form>
                                     <a href="{{ route('images.destroy', $image) }}" class="dropdown-item" onclick="event.preventDefault();
-                                        document.getElementById('delete-image').submit();">
+                                        document.getElementById('delete-image-{{$image->id}}').submit();">
                                         Delete
                                     </a>
                                 </div>

@@ -19,8 +19,8 @@ body {
     grid-gap: 1em;
 }
 
-.carousel-detail {
-    height: 75vh;
+.project-container {
+    height: 70vh;
 }
 
 .image-box {
@@ -89,15 +89,17 @@ body {
 
 .brand>div {
     height: calc(96.5% / 2);
-    background: pink;
+    background: #e4e4e4
 }
 
 .small-box {
     grid-area: span 1 / span 1;
+    background: #e4e4e4
 }
 
 .big-box {
     grid-area: span 2 / span 2;
+    background: #e4e4e4
 }
 
 img {

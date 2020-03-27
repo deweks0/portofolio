@@ -11,50 +11,55 @@
                 <div class="card-header border-0 d-flex justify-content-between align-items-center">
                     <h3 class="mb-0">Project {{ $page->id }}</h3>
 
-                    <a href="#" class="btn btn-primary">
+                    <a href="{{ route('pages.create_project_detail', $page) }}" class="btn btn-primary">
                         Add Project Detail
                     </a>
                 </div>
                 <hr class="my-1">
                 <div class="card-body">
-                    <div>
-                        <h4>Project Detail 1</h4>
-                    </div>
-                    {{-- @forelse ($images as $image)
-                    <div class="w-25 mx-2 mb-4 d-flex">
-                        <img src="{{ asset('storage/' . $image->src) }}" class="w-100 h-150px rounded">
-                    <span class="text-right">
-                        <div class="dropdown">
-                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                <form id="delete-image" action="{{ route('images.destroy', $image) }}" method="POST"
-                                    style="display: none;">
-                                    @csrf
-                                    @method('DELETE')
-                                </form>
-                                <a href="{{ route('images.destroy', $image) }}" class="dropdown-item" onclick="event.preventDefault();
-                                        document.getElementById('delete-image').submit();">
-                                    Delete
-                                </a>
+                    @forelse ($page->projectDetails as $key => $projectDetail)
+                    <div class="border card-body mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4>Project Detail {{ $key + 1 }}</h4>
+                            <button type="submit" class="btn btn-success">Save</button>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                        <hr class="my-3">
+                        <div class="d-flex justify-content-between">
+                            <div class="w-100 mr-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <h5 class="mr-3 mb-0">Slide Image</h5>
+                                    <a href="{{ route('pages.choose_image') }}" class="btn btn-sm btn-primary">
+                                        Change Image
+                                    </a>
+                                </div>
+
+                                <img src="{{ asset('storage/'.$projectDetail->image->src) }}" class="w-100 h-150px">
+                            </div>
+                            <div class="w-100 mr-4">
+                                <h5 class="mb-3">Left Description</h5>
+                                <textarea name="left_description" id="left_description" class="form-control"
+                                    rows="6">{{ $projectDetail->left_description }}</textarea>
+                            </div>
+                            <div class="w-100">
+                                <h5 class="mb-3">Right Description</h5>
+                                <textarea name="right_description" id="right_description" class="form-control"
+                                    rows="6">{{ $projectDetail->right_description }}</textarea>
                             </div>
                         </div>
-                    </span>
+                    </div>
+                    @empty
+                    <div class="border card-body">
+                        <span class="text-danger">Project detail is empty!</span>
+                    </div>
+                    @endforelse
                 </div>
-                @empty
-                <div class="text-center">
-                    <span class="font-weight-bold text-warning">Image data is empty!</span>
-                </div>
-                @endforelse --}}
             </div>
         </div>
     </div>
-</div>
 
-<!-- Footer -->
-@include('layouts.footers.auth')
+    <!-- Footer -->
+    @include('layouts.footers.auth')
 </div>
 @endsection
 

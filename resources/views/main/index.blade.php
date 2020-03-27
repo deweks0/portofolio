@@ -1,4 +1,4 @@
-@extends('main.app')
+@extends('main.app', ['title' => 'Home'])
 
 @section('content')
 <div class="mt-4 mx-4 mb-4 mb-md-2">
@@ -32,11 +32,13 @@
                     </div>
                     <div class="small-box">
                         <a href="detail.html">
-                            <img src="./img/5.jpg" alt=""></a>
+                            <img src="./img/5.jpg" alt="">
+                        </a>
                     </div>
                     <div class="big-box">
                         <a href="detail.html">
-                            <img src="./img/4.jpg" alt=""></a>
+                            <img src="./img/4.jpg" alt="">
+                        </a>
                     </div>
                     <div class="small-box">
                         <a href="detail.html">
@@ -45,16 +47,18 @@
                     </div>
                     <div class="small-box">
                         <a href="news.html">
-                            <img src="./img/6.jpeg" alt=""></a>
-                    </div>
-                    <div class="small-box">
-                        <a href="detail.html"><a href="detail.html">
-                                <img src="./img/7.jpg" alt=""></a>
+                            <img src="./img/6.jpeg" alt="">
                         </a>
                     </div>
                     <div class="small-box">
                         <a href="detail.html">
-                            <img src="./img/22.jpg" alt=""></a>
+                            <img src="./img/7.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="small-box">
+                        <a href="detail.html">
+                            <img src="./img/22.jpg" alt="">
+                        </a>
                     </div>
                     <div class="small-box">
                         <a href="detail.html">
@@ -207,17 +211,17 @@
                             </a>
                         </div>
                     </div>
-                    <div>
+                    <div class="small-box">
                         <a href="detail.html">
                             <img src="./img/71.jpg" alt="">
                         </a>
                     </div>
-                    <div>
+                    <div class="small-box">
                         <a href="detail.html">
                             <img src="./img/10.jpg" alt="">
                         </a>
                     </div>
-                    <div>
+                    <div class="small-box">
                         <a href="detail.html">
                             <img src="./img/11.jpg" alt="">
                         </a>
@@ -228,13 +232,13 @@
     </div>
 </div>
 <!-- button previous -->
-<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+{{-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
-</a>
+</a> --}}
 <!-- button next -->
-<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+{{-- <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
-</a>
+</a> --}}
 @endsection

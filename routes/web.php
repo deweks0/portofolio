@@ -33,6 +33,9 @@ Route::prefix('admin')->namespace('Admin')->middleware(['auth'])->group(function
 
 	Route::resource('/images', 'ImageController');
 	Route::resource('/pages', 'PageController');
+	Route::get('/pages/{page}/project-detail/create', 'PageController@createProjectDetail')->name('pages.create_project_detail');
+	Route::post('/pages/{page}/project-detail', 'PageController@storeProjectDetail')->name('pages.store_project_detail');
+	Route::get('/pages/main/about', 'PageController@about')->name('pages.about');
 	Route::get('/pages/main/about', 'PageController@about')->name('pages.about');
 	Route::get('/pages/main/about/choose-image', 'PageController@chooseImage')->name('pages.choose_image');
 	Route::post('/pages/main/about', 'PageController@updateImage')->name('pages.update_image');

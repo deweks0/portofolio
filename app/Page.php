@@ -12,4 +12,9 @@ class Page extends Model
     {
         return $this->belongsToMany(Image::class);
     }
+
+    public function projectDetails()
+    {
+        return $this->hasMany(ProjectDetail::class);
+    }
 }

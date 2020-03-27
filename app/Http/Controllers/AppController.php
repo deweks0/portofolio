@@ -14,7 +14,7 @@ class AppController extends Controller
 
     public function about()
     {
-        $page = Page::find(10)->load('images');
+        $page = Page::find(11)->load('images');
 
         return view('main.about', compact('page'));
     }
@@ -26,7 +26,7 @@ class AppController extends Controller
 
     public function news()
     {
-        $page = Page::find(11);
+        $page = Page::find(12);
 
         return view('main.news', compact('page'));
     }
