@@ -27,11 +27,10 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::prefix('admin')->namespace('Admin')->middleware(['auth'])->group(function () {
-	Route::get('/home', 'PageImageController@home')->name('home');
+	Route::get('/home', 'HomeController@index')->name('home');
 
-	// didieu yan admin panel wkwk
 	Route::resource('/images', 'ImageController');
-	Route::resource('/page', 'pageController');
+	Route::resource('/pages', 'pageController');
 	Route::get('/page/detail', 'PageImageController@detail')->name('detail');
 	Route::get('/page/about', 'PageImageController@about')->name('about');
 	Route::put('/page/updateimage/{image}', 'PageImageController@UpdateImage')->name('imageUpdate');

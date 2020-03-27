@@ -42,8 +42,9 @@ class ImageController extends Controller
         $file = $request->file('image');
         $storage = Storage::putFile('public', $file);
 
-        // ddd($file->hashName());
         Image::create(['src' => $file->hashName()]);
+
+        return redirect(route('images.index'));
     }
 
     /**
@@ -91,8 +92,10 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
-        $storage = Storage::delete($image->src);
-        ddd($storage);
+        Storage::delete('/public/' . $image->src);
+
         $image->delete();
+
+        return redirect(route('images.index'));
     }
 }
