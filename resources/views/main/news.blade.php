@@ -6,14 +6,14 @@
 
     <div class="row h-75 justify-content-center align-items-center">
         <div class="col-lg-6 offset-5">
-            <p style="white-space: pre-line">
+            <p class="pre-line">
                 {{ $page->description }}
             </p>
         </div>
     </div>
 
     <div class="pl-4 ml-5">
-        <a href="#" class="text-decoration-none text-black">home</a>
+        <a href="{{ route('/') }}" class="text-decoration-none text-black">home</a>
         <p class="text-muted">back to home</p>
     </div>
 </div>

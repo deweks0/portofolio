@@ -15,7 +15,7 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 30.5vh;
+    grid-auto-rows: 29.5vh;
     grid-gap: 1em;
 }
 
@@ -26,6 +26,16 @@ body {
 .image-box {
     width: 400px;
     height: 400px;
+}
+
+@media screen and (min-width: 1680px) {
+    .small {
+        font-size: 100% !important;
+    }
+
+    .grid {
+        grid-auto-rows: 30vh;
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -84,39 +94,48 @@ body {
 }
 
 .brand>div:first-child {
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 }
 
 .brand>div {
     height: calc(96.5% / 2);
-    background: #e4e4e4
+    background: #e4e4e4;
+    position: relative;
 }
 
 .small-box {
     grid-area: span 1 / span 1;
-    background: #e4e4e4
+    background: #e4e4e4;
+    position: relative;
+    overflow: hidden;
 }
 
 .big-box {
     grid-area: span 2 / span 2;
-    background: #e4e4e4
+    background: #e4e4e4;
+    position: relative;
+    overflow: hidden;
 }
 
 img {
     width: 100%;
-    height: 100%;
+    height: 100% !important;
 }
 
 .text-black {
     color: rgb(5, 5, 5);
 }
 
+.bg-black {
+    background-color: #000 !important;
+}
+
 .grayscale {
-    filter: grayscale(.7);
+    filter: grayscale(0.7);
 }
 
 .text-small {
-    font-size: .9rem;
+    font-size: 0.9rem;
     line-height: 1.15rem;
 }
 
@@ -125,5 +144,37 @@ img {
 }
 
 .ls-sm {
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+}
+
+.ls-lg {
+    letter-spacing: 16px;
+}
+
+.pre-line {
+    white-space: pre-line;
+}
+
+ol {
+    margin-bottom: 0;
+}
+
+.project {
+    display: block;
+}
+
+.project:hover .project-hover {
+    transform: translateY(0);
+}
+
+.project-hover {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    transition: 0.4s;
+    transform: translateY(101%);
+    color: white;
+    padding: 1rem;
 }

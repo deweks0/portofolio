@@ -10,7 +10,12 @@ class Image extends Model
 
     public function pages()
     {
-        return $this->belongsToMany(Page::class);
+        return $this->morphedByMany(Page::class, 'imageable');
+    }
+
+    public function slides()
+    {
+        return $this->morphedByMany(Slide::class, 'imageable');
     }
 
     public function projectDetails()

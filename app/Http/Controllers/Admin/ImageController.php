@@ -21,16 +21,6 @@ class ImageController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('image.create');
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -44,44 +34,10 @@ class ImageController extends Controller
 
         Image::create(['src' => $file->hashName()]);
 
+        session()->flash('message', 'Image successfully uploaded!');
+        session()->flash('alert-class', 'alert-success');
+
         return redirect(route('images.index'));
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Image  $image
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Image $image)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Image  $image
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Image $image)
-    {
-        return view('image.edit', compact('image'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Image  $image
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Image $image)
-    {
-        Storage::delete($image->src);
-        $fileName = Storage::putFile('public/img' . $request->file('image'));
-        $image->src = $request->file('image')->hashName();
-        $image->save();
     }
 
     /**
@@ -95,6 +51,9 @@ class ImageController extends Controller
         Storage::delete('/public/' . $image->src);
 
         $image->delete();
+
+        session()->flash('message', 'Image successfully deleted!');
+        session()->flash('alert-class', 'alert-danger');
 
         return redirect(route('images.index'));
     }

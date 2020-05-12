@@ -5,9 +5,8 @@
     <h5 class="font-weight-bold mt-5 pl-4 ml-5 text-uppercase ls-sm">Inquiries</h5>
     <div class="row align-items-center h-75">
         <div class="col-lg-3 offset-6">
-            <div class="mb-5">
-                For equires please send us an e-mail to info@L-A-B.id
-                telphone:212312312
+            <div class="mb-5 pre-line">
+                {{ $page->description }}
             </div>
             <form>
                 <div class="form-group">
@@ -28,7 +27,7 @@
     </div>
 
     <div class="pl-4 ml-5">
-        <a href="#" class="text-decoration-none text-black p-0">home</a>
+        <a href="{{ route('/') }}" class="text-decoration-none text-black p-0">home</a>
         <p class="text-muted">back to home</p>
     </div>
 </div>

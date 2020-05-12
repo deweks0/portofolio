@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Image;
 use App\Page;
+use App\ProjectDetail;
+use App\Slide;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -17,8 +19,18 @@ class PageController extends Controller
     public function index()
     {
         $page = Page::find(10);
+        $images = Image::all();
+        $slideOne = Slide::with('images')->where('slider_id', 1)->get();
+        $slideTwo = Slide::with('images')->where('slider_id', 2)->get();
+        $slideThree = Slide::with('images')->where('slider_id', 3)->get();
 
-        return view('page.show_index', compact('page'));
+        return view('page.show_index', compact(
+            'page',
+            'images',
+            'slideOne',
+            'slideTwo',
+            'slideThree'
+        ));
     }
 
     /**
@@ -55,6 +67,10 @@ class PageController extends Controller
      */
     public function show(Page $page)
     {
+        if ($page->id > 9) {
+            abort(404);
+        }
+
         return view('page.show', compact('page'));
     }
 
@@ -78,11 +94,10 @@ class PageController extends Controller
      */
     public function update(Request $request, Page $page)
     {
-        $rules = $request->validate([
-            'left_description' => 'required'
-        ]);
+        $page->update($request->all());
 
-        $page->update($rules);
+        session()->flash('message', $page->title . ' Page successfully updated!');
+        session()->flash('alert-class', 'alert-info');
 
         return back();
     }
@@ -93,6 +108,9 @@ class PageController extends Controller
 
         $page->images()->sync(request('images'));
 
+        session()->flash('message', $page->title . ' Slider Image successfully updated!');
+        session()->flash('alert-class', 'alert-info');
+
         return redirect(route('pages.about'));
     }
 
@@ -101,6 +119,7 @@ class PageController extends Controller
         $page = Page::find(11);
 
         $page->images()->detach(request('images'));
+        session()->flash('alert-class', 'alert-danger');
 
         return redirect(route('pages.about'));
     }
@@ -143,25 +162,5 @@ class PageController extends Controller
         $page = Page::find(13);
 
         return view('page.show_main', compact('page'));
-    }
-
-    public function createProjectDetail(Page $page)
-    {
-        $images = Image::all();
-
-        return view('page.create_project_detail', compact('page', 'images'));
-    }
-
-    public function storeProjectDetail(Page $page)
-    {
-        $data = request()->validate([
-            'image_id' => 'required',
-            'left_description' => 'required',
-            'right_description' => 'required',
-        ]);
-
-        $page->projectDetails()->create($data);
-
-        return redirect(route('pages.show', $page));
     }
 }

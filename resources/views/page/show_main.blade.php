@@ -13,7 +13,18 @@
                 </div>
                 <hr class="my-1">
                 <div class="card-body">
-                    @if ($page->id == 10)
+                    @if (request()->session()->has('message'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-inner--text">
+                            {{ session()->get('message') }}
+                        </span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @endif
+                    @if ($page->id == 11)
                     <div class="d-flex flex-column border mb-4 rounded card-body">
                         <div class="d-flex mb-4">
                             <h4 class="mr-3 mb-0">Slider Images</h4>
@@ -39,7 +50,7 @@
                             <textarea name="description" id="description" class="form-control" cols="30"
                                 rows="15">{{ $page->description }}</textarea>
                         </div>
-                        @if ($page->id == 10)
+                        @if ($page->id == 11)
                         <div class="form-group">
                             <label for="left_description">Left Description</label>
                             <textarea name="left_description" id="left_description" class="form-control" cols="30"

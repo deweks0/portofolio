@@ -20,12 +20,11 @@
                     <div class="border card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <h4>Project Detail</h4>
-                            <a href="{{ route('pages.store_project_detail', $page) }}" onclick="event.preventDefault();
+                            <a href="{{ route('projectDetails.store', $page) }}" onclick="event.preventDefault();
                             document.getElementById('project-detail').submit();" class="btn btn-success">Save</a>
                         </div>
                         <hr class="my-3">
-                        <form action="{{ route('pages.store_project_detail', $page) }}" id="project-detail"
-                            method="POST">
+                        <form action="{{ route('projectDetails.store', $page) }}" id="project-detail" method="POST">
                             @csrf
                             <div class="d-flex justify-content-between">
                                 <div class="w-100 mr-4">

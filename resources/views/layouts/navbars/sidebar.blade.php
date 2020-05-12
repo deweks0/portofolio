@@ -25,10 +25,10 @@
                     <div class=" dropdown-header noti-title">
                         <h6 class="text-overflow m-0">{{ __('Welcome!') }}</h6>
                     </div>
-                    <a href="{{ route('profile.edit') }}" class="dropdown-item">
-                        <i class="ni ni-single-02"></i>
-                        <span>My Profile</span>
-                    </a>
+                    {{-- <a href="{{ route('profile.edit') }}" class="dropdown-item">
+                    <i class="ni ni-single-02"></i>
+                    <span>My Profile</span>
+                    </a> --}}
                     <div class="dropdown-divider"></div>
                     <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
@@ -44,9 +44,7 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="{{ route('home') }}">
-                            <img src="{{ asset('argon') }}/img/brand/blue.png">
-                        </a>
+                        Admin Panel
                     </div>
                     <div class="col-6 collapse-close">
                         <button type="button" class="navbar-toggler" data-toggle="collapse"
@@ -75,8 +73,8 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">
-                        <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
+                    <a class="nav-link {{ request()->is('admin/home') ? 'active' : '' }}" href="{{ route('home') }}">
+                        <i class="ni ni-tv-2 text-primary"></i> Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
@@ -125,7 +123,7 @@
 
                     <div class="collapse show" id="navbar-2">
                         <ul class="nav nav-sm flex-column">
-                            @for ($i = 1; $i <= 8; $i++) <li class="nav-item">
+                            @for ($i = 1; $i <= 9; $i++) <li class="nav-item">
                                 <a class="nav-link {{ request()->is('admin/pages/'.$i) ? 'active' : '' }}"
                                     href="{{ route('pages.show', $i) }}">
                                     Project {{ $i }}

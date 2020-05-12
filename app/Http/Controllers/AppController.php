@@ -3,13 +3,37 @@
 namespace App\Http\Controllers;
 
 use App\Page;
+use App\Slide;
 use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
     public function index()
     {
-        return view('main.index');
+        $images = Page::findOrFail(10)->load('images')->images;
+        $slideOne = Slide::with('images')->where('slider_id', 1)->get();
+        $slideTwo = Slide::with('images')->where('slider_id', 2)->get();
+        $slideThree = Slide::with('images')->where('slider_id', 3)->get();
+
+        $randomSlide = collect([
+            'main.partials.slide_1',
+            'main.partials.slide_2',
+            'main.partials.slide_3'
+        ]);
+
+        foreach (Slide::where('name', 'LIKE', '%' . 'project' . '%')->get() as $slide) {
+            if (count($slide->images) === 0) {
+                abort(500, 'Image Not Set');
+            }
+        }
+
+        return view('main.index', compact(
+            'images',
+            'slideOne',
+            'slideTwo',
+            'slideThree',
+            'randomSlide'
+        ));
     }
 
     public function about()
@@ -21,7 +45,9 @@ class AppController extends Controller
 
     public function inquiries()
     {
-        return view('main.inquiries');
+        $page = Page::find(13);
+
+        return view('main.inquiries', compact('page'));
     }
 
     public function news()

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateImagePageTable extends Migration
+class CreateImageablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateImagePageTable extends Migration
      */
     public function up()
     {
-        Schema::create('image_page', function (Blueprint $table) {
-            $table->id();
+        Schema::create('imageables', function (Blueprint $table) {
             $table->unsignedBigInteger('image_id');
-            $table->unsignedBigInteger('page_id');
+            $table->unsignedBigInteger('imageable_id');
+            $table->string('imageable_type');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateImagePageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('image_page');
+        Schema::dropIfExists('imageables');
     }
 }

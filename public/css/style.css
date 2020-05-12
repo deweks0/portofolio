@@ -63,6 +63,10 @@ body {
     h3 {
         font-size: medium !important;
     }
+
+    .w-25 {
+        width: 44% !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -72,6 +76,10 @@ body {
 
     p {
         font-size: 0.6rem;
+    }
+
+    .w-25 {
+        width: 75% !important;
     }
 }
 
@@ -87,6 +95,10 @@ body {
     .image-box {
         width: 325px;
         height: 325px;
+    }
+
+    .w-25 {
+        width: 90% !important;
     }
 }
 

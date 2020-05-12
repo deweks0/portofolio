@@ -14,13 +14,13 @@
                     <div class="row">
                         <div class="col-md-5">
                             <div class="w-25 w-lg-100 mt-3">
-                                <p style="white-space: pre-line">
+                                <p class="pre-line">
                                     {{ $projectDetail->left_description }}
                                 </p>
                             </div>
                         </div>
                         <div class="col-md-7 mt-3 text-justify">
-                            <p style="white-space: pre-line">
+                            <p class="pre-line">
                                 {{ $projectDetail->right_description }}
                             </p>
                         </div>
@@ -32,7 +32,7 @@
     </div>
     <div class="d-flex flex-column ml-3">
         <span class="text-black-50"> Back To Home</span>
-        <a href="index.html" class="text-black  font-weight-bold">Home</a>
+        <a href="{{ route('/') }}" class="text-black  font-weight-bold">Home</a>
     </div>
 </div>
 @endsection
