@@ -356,6 +356,20 @@
                                                         Project 9
                                                     </a>
                                                 </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link mb-sm-3 mb-md-3" id="tabs-icons-slide-10-tab"
+                                                        data-toggle="tab" href="#tabs-icons-slide-10" role="tab"
+                                                        aria-controls="tabs-icons-slide-10" aria-selected="false">
+                                                        Project 10
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link mb-sm-3 mb-md-3" id="tabs-icons-slide-11-tab"
+                                                        data-toggle="tab" href="#tabs-icons-slide-11" role="tab"
+                                                        aria-controls="tabs-icons-slide-11" aria-selected="false">
+                                                        Project 11
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </div>
 
@@ -411,6 +425,10 @@
                                                 'project_eight', 'slideId' => 1])
                                                 @include('page.partials.tab_image', ['id' => 9, 'slideName' =>
                                                 'project_nine', 'slideId' => 1])
+                                                @include('page.partials.tab_image', ['id' => 10, 'slideName' =>
+                                                'project_ten', 'slideId' => 1])
+                                                @include('page.partials.tab_image', ['id' => 11, 'slideName' =>
+                                                'project_eleven', 'slideId' => 1])
                                             </div>
                                         </div>
                                         </form>
@@ -723,6 +741,20 @@
                                                             Project 9
                                                         </a>
                                                     </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link mb-sm-3 mb-md-3" id="tabs-icons-slide-23-tab"
+                                                            data-toggle="tab" href="#tabs-icons-slide-23" role="tab"
+                                                            aria-controls="tabs-icons-slide-23" aria-selected="false">
+                                                            Project 10
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link mb-sm-3 mb-md-3" id="tabs-icons-slide-24-tab"
+                                                            data-toggle="tab" href="#tabs-icons-slide-24" role="tab"
+                                                            aria-controls="tabs-icons-slide-24" aria-selected="false">
+                                                            Project 11
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
 
@@ -778,6 +810,10 @@
                                                     'project_eight', 'slideId' => 2])
                                                     @include('page.partials.tab_image', ['id' => 22, 'slideName' =>
                                                     'project_nine', 'slideId' => 2])
+                                                    @include('page.partials.tab_image', ['id' => 23, 'slideName' =>
+                                                    'project_ten', 'slideId' => 2])
+                                                    @include('page.partials.tab_image', ['id' => 24, 'slideName' =>
+                                                    'project_eleven', 'slideId' => 2])
                                                 </div>
 
                                             </div>
@@ -1092,6 +1128,20 @@
                                                             Project 9
                                                         </a>
                                                     </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link mb-sm-3 mb-md-3" id="tabs-icons-slide-36-tab"
+                                                            data-toggle="tab" href="#tabs-icons-slide-36" role="tab"
+                                                            aria-controls="tabs-icons-slide-36" aria-selected="false">
+                                                            Project 10
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link mb-sm-3 mb-md-3" id="tabs-icons-slide-37-tab"
+                                                            data-toggle="tab" href="#tabs-icons-slide-37" role="tab"
+                                                            aria-controls="tabs-icons-slide-37" aria-selected="false">
+                                                            Project 11
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
 
@@ -1151,6 +1201,10 @@
                                                     'project_eight', 'slideId' => 3])
                                                     @include('page.partials.tab_image', ['id' => 35, 'slideName' =>
                                                     'project_nine', 'slideId' => 3])
+                                                    @include('page.partials.tab_image', ['id' => 36, 'slideName' =>
+                                                    'project_ten', 'slideId' => 3])
+                                                    @include('page.partials.tab_image', ['id' => 37, 'slideName' =>
+                                                    'project_eleven', 'slideId' => 3])
 
                                                 </div>
                                             </div>
