@@ -10,12 +10,12 @@
             @endforeach
         </ul>
         <div class="custom-navigation">
-            <a href="#" class="flex-prev">
-                <i class="fas fa-chevron-left fa-2x"></i>
+            <a href="#" class="flex-prev text-black-transparant">
+                <i class="fas fa-chevron-left fa-3x"></i>
             </a>
             <div class="custom-controls-container"></div>
-            <a href="#" class="flex-next">
-                <i class="fas fa-chevron-right fa-2x"></i>
+            <a href="#" class="flex-next text-black-transparant">
+                <i class="fas fa-chevron-right fa-3x"></i>
             </a>
         </div>
     </div>

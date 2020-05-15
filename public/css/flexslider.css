@@ -275,12 +275,15 @@ html[xmlns] .flexslider .slides {
     z-index: 999;
 }
 .custom-controls-container{
-width: 95vw;
+width: 93vw;
 }
 .slider-home{
   position: relative;
 }
-
+.text-black-transparant{
+  color: #000;
+  opacity: .2;
+}
 /* ====================================================================================================================
  * RESPONSIVE
  * ====================================================================================================================*/
