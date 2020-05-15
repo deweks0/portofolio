@@ -25,7 +25,7 @@
                                 class="img-fluid">
                         </div>
                         <div class="carousel-item h-100">
-                            <img src="{{ asset('storage/' . $slideOne->where('name', 'project_two')->second()->images()->first()->src) }}"
+                            <img src="{{ asset('storage/' . $slideOne->where('name', 'project_two')->first()->images()->first()->src) }}"
                                 class="img-fluid">
                         </div>
                     </div>
