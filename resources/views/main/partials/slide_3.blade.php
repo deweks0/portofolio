@@ -2,12 +2,14 @@
     <section class="grid">
         <div class="big-box project">
             <a href="{{ route('project', 1) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_one')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_one')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_one')->first()->content }}
                 </div>
@@ -15,12 +17,14 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 2) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_two')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_two')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_two')->first()->content }}
                 </div>
@@ -28,12 +32,14 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 10) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_ten')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_ten')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_ten')->first()->content }}
                 </div>
@@ -41,12 +47,14 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 11) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_eleven')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_eleven')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_eleven')->first()->content }}
                 </div>
@@ -54,12 +62,14 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 3) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_three')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_three')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_three')->first()->content }}
                 </div>
@@ -67,12 +77,14 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 4) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_four')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_four')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_four')->first()->content }}
                 </div>
@@ -80,12 +92,14 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 5) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_five')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_five')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_five')->first()->content }}
                 </div>
@@ -93,12 +107,14 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 6) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_six')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_six')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_six')->first()->content }}
                 </div>
@@ -122,12 +138,14 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 7) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_seven')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_seven')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_seven')->first()->content }}
                 </div>
@@ -135,12 +153,14 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 8) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_eight')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_eight')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_eight')->first()->content }}
                 </div>
@@ -148,12 +168,14 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 9) }}">
-               <div class="carousel-inner h-100">
+                <div class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
-                <img src="{{ asset('storage/' . $slideThree->where('name', 'project_nine')->first()->images()->first()->src) }}"
-                    alt="">
+                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_nine')->first()->images()->first()->src) }}"
+                                alt="">
                         </div>
-               </div>
+                    </div>
+                </div>
                 <div class="project-hover position-absolute">
                     {{ $slideThree->where('name', 'project_nine')->first()->content }}
                 </div>
