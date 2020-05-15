@@ -15,11 +15,11 @@ class AppController extends Controller
         $slideTwo = Slide::with('images')->where('slider_id', 2)->get();
         $slideThree = Slide::with('images')->where('slider_id', 3)->get();
 
-        foreach (Slide::where('name', 'LIKE', '%' . 'project' . '%')->get() as $slide) {
-            if (count($slide->images) === 0) {
-                abort(500, 'Image Not Set');
-            }
-        }
+        // foreach (Slide::where('name', 'LIKE', '%' . 'project' . '%')->get() as $slide) {
+        //     if (count($slide->images) === 0) {
+        //         abort(500, 'Image Not Set');
+        //     }
+        // }
 
         if (now()->second <= 25) {
             $randomSlide = collect([

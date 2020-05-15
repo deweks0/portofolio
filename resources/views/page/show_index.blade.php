@@ -1164,7 +1164,6 @@
                                                                         type="radio"
                                                                         @if(count($slideThree->where('name',
                                                                     'project_one')->first()->images) == 0)
-                                                                    {{ '' }}
                                                                     @else
                                                                     {{ $slideThree->where('name', 'project_one')->first()->images()->first()->id == $image->id ? 'checked' : ''}}
                                                                     @endif>

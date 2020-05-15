@@ -18,8 +18,19 @@
         </div>
         <div class="small-box project">
             <a href="{{ route('project', 1) }}">
-                <img src="{{ asset('storage/' . $slideOne->where('name', 'project_one')->first()->images()->first()->src) }}"
-                    class="h-100">
+                <div id="carousel-project-1" class="carousel slide h-100" data-ride="carousel">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <img src="{{ asset('storage/' . $slideOne->where('name', 'project_one')->first()->images()->first()->src) }}"
+                                class="img-fluid">
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $slideOne->where('name', 'project_two')->second()->images()->first()->src) }}"
+                                class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-hover position-absolute">
                     {{ $slideOne->where('name', 'project_one')->first()->content }}
                 </div>
