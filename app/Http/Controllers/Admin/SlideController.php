@@ -33,14 +33,12 @@ class SlideController extends Controller
     {
         $slide = Slide::where('slider_id', request('slider_id'))->where('name', $name)->first();
 
-        if (request($name)) {
+        if (request($name . '_content')) {
             $slide->update([
-                'description' => request($name),
                 'content' => request($name . '_content')
             ]);
         } else {
             $slide->update([
-                'description' => '',
                 'content' => ''
             ]);
         }
