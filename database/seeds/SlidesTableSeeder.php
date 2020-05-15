@@ -80,11 +80,11 @@ class SlidesTableSeeder extends Seeder
             ],
             [
                 'slider_id' => $id,
-                'name' => 'news'
+                'name' => 'project_ten'
             ],
             [
                 'slider_id' => $id,
-                'name' => 'about'
+                'name' => 'project_eleven'
             ],
         ];
     }

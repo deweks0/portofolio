@@ -17,7 +17,6 @@ class CreateSlidesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('slider_id');
             $table->string('name');
-            $table->string('description')->nullable();
             $table->string('content')->nullable();
             $table->timestamps();
         });

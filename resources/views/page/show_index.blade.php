@@ -121,50 +121,26 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="website_name"
+                                                        <label for="website_name_content"
                                                             class="badge badge-success badge-circle w-auto">Website
                                                             Name</label>
-                                                        <input class="form-control" type="text" name="website_name"
-                                                            id="website_name" placeholder="Website Name"
-                                                            value="{{ $slideOne->where('name', 'website_name')->first()->description }}">
+                                                        <input class="form-control" type="text"
+                                                            name="website_name_content" id="website_name_content"
+                                                            placeholder="Website Name"
+                                                            value="{{ $slideOne->where('name', 'website_name')->first()->content }}">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="website_info"
+                                                        <label for="website_info_content"
                                                             class="badge badge-success badge-circle w-auto">Website
                                                             Info</label>
-                                                        <textarea name="website_info" id="website_info" rows="5"
-                                                            class="form-control"
-                                                            placeholder="Website Info">{{ $slideOne->where('name', 'website_info')->first()->description }}</textarea>
+                                                        <textarea name="website_info_content" id="website_info_content"
+                                                            rows="5" class="form-control"
+                                                            placeholder="Website Info">{{ $slideOne->where('name', 'website_info')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="news"
-                                                            class="badge badge-success badge-circle w-auto">News</label>
-                                                        <textarea name="news" id="news" class="form-control" rows="5"
-                                                            placeholder="News">{{ $slideOne->where('name', 'news')->first()->description }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="about"
-                                                            class="badge badge-success badge-circle w-auto">About</label>
-                                                        <textarea name="about" id="about" class="form-control" rows="5"
-                                                            placeholder="About">{{ $slideOne->where('name', 'about')->first()->description }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_one"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            1
-                                                            Description</label>
-                                                        <input class="form-control" type="text" name="project_one"
-                                                            id="project_one" placeholder="Project 1"
-                                                            value="{{ $slideOne->where('name', 'project_one')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_one_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -177,14 +153,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_two"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            2</label>
-                                                        <input class="form-control" type="text" name="project_two"
-                                                            id="project_two" placeholder="Project 2"
-                                                            value="{{ $slideOne->where('name', 'project_two')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_two_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             2
@@ -195,14 +163,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_three"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            3</label>
-                                                        <input class="form-control" type="text" name="project_three"
-                                                            id="project_three" placeholder="Project 3"
-                                                            value="{{ $slideOne->where('name', 'project_three')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_three_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -216,14 +176,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_four"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            4</label>
-                                                        <input class="form-control" type="text" name="project_four"
-                                                            id="project_four" placeholder="Project 4"
-                                                            value="{{ $slideOne->where('name', 'project_four')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_four_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             4
@@ -235,14 +187,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_five"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            5</label>
-                                                        <input class="form-control" type="text" name="project_five"
-                                                            id="project_five" placeholder="Project 5"
-                                                            value="{{ $slideOne->where('name', 'project_five')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_five_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -256,14 +200,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_six"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            6</label>
-                                                        <input class="form-control" type="text" name="project_six"
-                                                            id="project_six" placeholder="Project 6"
-                                                            value="{{ $slideOne->where('name', 'project_six')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_six_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             6
@@ -275,14 +211,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_seven"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            7</label>
-                                                        <input class="form-control" type="text" name="project_seven"
-                                                            id="project_seven" placeholder="Project 7"
-                                                            value="{{ $slideOne->where('name', 'project_seven')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_seven_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -296,14 +224,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_eight"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            8</label>
-                                                        <input class="form-control" type="text" name="project_eight"
-                                                            id="project_eight" placeholder="Project 8"
-                                                            value="{{ $slideOne->where('name', 'project_eight')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_eight_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             8
@@ -316,14 +236,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_nine"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            9</label>
-                                                        <input class="form-control" type="text" name="project_nine"
-                                                            id="project_nine" placeholder="Project 9"
-                                                            value="{{ $slideOne->where('name', 'project_nine')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_nine_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             9
@@ -332,6 +244,30 @@
                                                         <textarea name="project_nine_content" id="project_nine_content"
                                                             class="form-control"
                                                             rows="5">{{ $slideOne->where('name', 'project_nine')->first()->content }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="project_ten_content"
+                                                            class="badge badge-success badge-circle w-auto">Project
+                                                            10
+                                                            Hover
+                                                            Content</label>
+                                                        <textarea name="project_ten_content" id="project_ten_content"
+                                                            class="form-control"
+                                                            rows="5">{{ $slideOne->where('name', 'project_ten')->first()->content }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="project_eleven_content"
+                                                            class="badge badge-success badge-circle w-auto">Project
+                                                            11
+                                                            Hover
+                                                            Content</label>
+                                                        <textarea name="project_eleven_content"
+                                                            id="project_eleven_content" class="form-control"
+                                                            rows="5">{{ $slideOne->where('name', 'project_eleven')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -551,50 +487,26 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="website_name"
+                                                        <label for="website_name_content"
                                                             class="badge badge-success badge-circle w-auto">Website
                                                             Name</label>
-                                                        <input class="form-control" type="text" name="website_name"
-                                                            id="website_name" placeholder="Website Name"
-                                                            value="{{ $slideTwo->where('name', 'website_name')->first()->description }}">
+                                                        <input class="form-control" type="text"
+                                                            name="website_name_content" id="website_name_content"
+                                                            placeholder="Website Name"
+                                                            value="{{ $slideTwo->where('name', 'website_name')->first()->content }}">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="website_info"
+                                                        <label for="website_info_content"
                                                             class="badge badge-success badge-circle w-auto">Website
                                                             Info</label>
-                                                        <textarea name="website_info" id="website_info" rows="5"
-                                                            class="form-control"
-                                                            placeholder="Website Info">{{ $slideTwo->where('name', 'website_info')->first()->description }}</textarea>
+                                                        <textarea name="website_info_content" id="website_info_content"
+                                                            rows="5" class="form-control"
+                                                            placeholder="Website Info">{{ $slideTwo->where('name', 'website_info')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="news"
-                                                            class="badge badge-success badge-circle w-auto">News</label>
-                                                        <textarea name="news" id="news" class="form-control" rows="5"
-                                                            placeholder="News">{{ $slideTwo->where('name', 'news')->first()->description }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="about"
-                                                            class="badge badge-success badge-circle w-auto">About</label>
-                                                        <textarea name="about" id="about" class="form-control" rows="5"
-                                                            placeholder="About">{{ $slideTwo->where('name', 'about')->first()->description }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_one"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            1
-                                                            Description</label>
-                                                        <input class="form-control" type="text" name="project_one"
-                                                            id="project_one" placeholder="Project 1"
-                                                            value="{{ $slideTwo->where('name', 'project_one')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_one_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -607,14 +519,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_two"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            2</label>
-                                                        <input class="form-control" type="text" name="project_two"
-                                                            id="project_two" placeholder="Project 2"
-                                                            value="{{ $slideTwo->where('name', 'project_two')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_two_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             2
@@ -625,14 +529,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_three"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            3</label>
-                                                        <input class="form-control" type="text" name="project_three"
-                                                            id="project_three" placeholder="Project 3"
-                                                            value="{{ $slideTwo->where('name', 'project_three')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_three_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -646,14 +542,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_four"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            4</label>
-                                                        <input class="form-control" type="text" name="project_four"
-                                                            id="project_four" placeholder="Project 4"
-                                                            value="{{ $slideTwo->where('name', 'project_four')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_four_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             4
@@ -665,14 +553,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_five"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            5</label>
-                                                        <input class="form-control" type="text" name="project_five"
-                                                            id="project_five" placeholder="Project 5"
-                                                            value="{{ $slideTwo->where('name', 'project_five')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_five_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -686,14 +566,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_six"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            6</label>
-                                                        <input class="form-control" type="text" name="project_six"
-                                                            id="project_six" placeholder="Project 6"
-                                                            value="{{ $slideTwo->where('name', 'project_six')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_six_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             6
@@ -705,14 +577,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_seven"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            7</label>
-                                                        <input class="form-control" type="text" name="project_seven"
-                                                            id="project_seven" placeholder="Project 7"
-                                                            value="{{ $slideTwo->where('name', 'project_seven')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_seven_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -726,14 +590,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_eight"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            8</label>
-                                                        <input class="form-control" type="text" name="project_eight"
-                                                            id="project_eight" placeholder="Project 8"
-                                                            value="{{ $slideTwo->where('name', 'project_eight')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_eight_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             8
@@ -746,14 +602,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_nine"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            9</label>
-                                                        <input class="form-control" type="text" name="project_nine"
-                                                            id="project_nine" placeholder="Project 9"
-                                                            value="{{ $slideTwo->where('name', 'project_nine')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_nine_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             9
@@ -762,6 +610,30 @@
                                                         <textarea name="project_nine_content" id="project_nine_content"
                                                             class="form-control"
                                                             rows="5">{{ $slideTwo->where('name', 'project_nine')->first()->content }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="project_ten_content"
+                                                            class="badge badge-success badge-circle w-auto">Project
+                                                            10
+                                                            Hover
+                                                            Content</label>
+                                                        <textarea name="project_ten_content" id="project_ten_content"
+                                                            class="form-control"
+                                                            rows="5">{{ $slideTwo->where('name', 'project_ten')->first()->content }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="project_eleven_content"
+                                                            class="badge badge-success badge-circle w-auto">Project
+                                                            11
+                                                            Hover
+                                                            Content</label>
+                                                        <textarea name="project_eleven_content"
+                                                            id="project_eleven_content" class="form-control"
+                                                            rows="5">{{ $slideTwo->where('name', 'project_eleven')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -984,50 +856,26 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="website_name"
+                                                        <label for="website_name_content"
                                                             class="badge badge-success badge-circle w-auto">Website
                                                             Name</label>
-                                                        <input class="form-control" type="text" name="website_name"
-                                                            id="website_name" placeholder="Website Name"
-                                                            value="{{ $slideThree->where('name', 'website_name')->first()->description }}">
+                                                        <input class="form-control" type="text"
+                                                            name="website_name_content" id="website_name_content"
+                                                            placeholder="Website Name"
+                                                            value="{{ $slideThree->where('name', 'website_name')->first()->content }}">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="website_info"
+                                                        <label for="website_info_content"
                                                             class="badge badge-success badge-circle w-auto">Website
                                                             Info</label>
-                                                        <textarea name="website_info" id="website_info" rows="5"
-                                                            class="form-control"
-                                                            placeholder="Website Info">{{ $slideThree->where('name', 'website_info')->first()->description }}</textarea>
+                                                        <textarea name="website_info_content" id="website_info_content"
+                                                            rows="5" class="form-control"
+                                                            placeholder="Website Info">{{ $slideThree->where('name', 'website_info')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="news"
-                                                            class="badge badge-success badge-circle w-auto">News</label>
-                                                        <textarea name="news" id="news" class="form-control" rows="5"
-                                                            placeholder="News">{{ $slideThree->where('name', 'news')->first()->description }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="about"
-                                                            class="badge badge-success badge-circle w-auto">About</label>
-                                                        <textarea name="about" id="about" class="form-control" rows="5"
-                                                            placeholder="About">{{ $slideThree->where('name', 'about')->first()->description }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_one"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            1
-                                                            Description</label>
-                                                        <input class="form-control" type="text" name="project_one"
-                                                            id="project_one" placeholder="Project 1"
-                                                            value="{{ $slideThree->where('name', 'project_one')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_one_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -1040,14 +888,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_two"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            2</label>
-                                                        <input class="form-control" type="text" name="project_two"
-                                                            id="project_two" placeholder="Project 2"
-                                                            value="{{ $slideThree->where('name', 'project_two')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_two_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             2
@@ -1058,14 +898,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_three"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            3</label>
-                                                        <input class="form-control" type="text" name="project_three"
-                                                            id="project_three" placeholder="Project 3"
-                                                            value="{{ $slideThree->where('name', 'project_three')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_three_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -1079,14 +911,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_four"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            4</label>
-                                                        <input class="form-control" type="text" name="project_four"
-                                                            id="project_four" placeholder="Project 4"
-                                                            value="{{ $slideThree->where('name', 'project_four')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_four_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             4
@@ -1098,14 +922,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_five"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            5</label>
-                                                        <input class="form-control" type="text" name="project_five"
-                                                            id="project_five" placeholder="Project 5"
-                                                            value="{{ $slideThree->where('name', 'project_five')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_five_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -1119,14 +935,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_six"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            6</label>
-                                                        <input class="form-control" type="text" name="project_six"
-                                                            id="project_six" placeholder="Project 6"
-                                                            value="{{ $slideThree->where('name', 'project_six')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_six_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             6
@@ -1138,14 +946,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_seven"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            7</label>
-                                                        <input class="form-control" type="text" name="project_seven"
-                                                            id="project_seven" placeholder="Project 7"
-                                                            value="{{ $slideThree->where('name', 'project_seven')->first()->description }}">
-                                                    </div>
                                                     <div class="form-group">
                                                         <label for="project_seven_content"
                                                             class="badge badge-success badge-circle w-auto">Project
@@ -1159,14 +959,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_eight"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            8</label>
-                                                        <input class="form-control" type="text" name="project_eight"
-                                                            id="project_eight" placeholder="Project 8"
-                                                            value="{{ $slideThree->where('name', 'project_eight')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_eight_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             8
@@ -1179,14 +971,6 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="project_nine"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            9</label>
-                                                        <input class="form-control" type="text" name="project_nine"
-                                                            id="project_nine" placeholder="Project 9"
-                                                            value="{{ $slideThree->where('name', 'project_nine')->first()->description }}">
-                                                    </div>
-                                                    <div class="form-group">
                                                         <label for="project_nine_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             9
@@ -1195,6 +979,30 @@
                                                         <textarea name="project_nine_content" id="project_nine_content"
                                                             class="form-control"
                                                             rows="5">{{ $slideThree->where('name', 'project_nine')->first()->content }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="project_ten_content"
+                                                            class="badge badge-success badge-circle w-auto">Project
+                                                            10
+                                                            Hover
+                                                            Content</label>
+                                                        <textarea name="project_ten_content" id="project_ten_content"
+                                                            class="form-control"
+                                                            rows="5">{{ $slideThree->where('name', 'project_ten')->first()->content }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="project_eleven_content"
+                                                            class="badge badge-success badge-circle w-auto">Project
+                                                            11
+                                                            Hover
+                                                            Content</label>
+                                                        <textarea name="project_eleven_content"
+                                                            id="project_eleven_content" class="form-control"
+                                                            rows="5">{{ $slideThree->where('name', 'project_eleven')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
