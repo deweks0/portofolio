@@ -15,16 +15,30 @@ class AppController extends Controller
         $slideTwo = Slide::with('images')->where('slider_id', 2)->get();
         $slideThree = Slide::with('images')->where('slider_id', 3)->get();
 
-        $randomSlide = collect([
-            'main.partials.slide_1',
-            'main.partials.slide_2',
-            'main.partials.slide_3'
-        ]);
-
         foreach (Slide::where('name', 'LIKE', '%' . 'project' . '%')->get() as $slide) {
             if (count($slide->images) === 0) {
                 abort(500, 'Image Not Set');
             }
+        }
+
+        if (now()->second <= 25) {
+            $randomSlide = collect([
+                'main.partials.slide_2',
+                'main.partials.slide_1',
+                'main.partials.slide_3'
+            ]);
+        } else if (now()->second >= 25 && now()->second <= 50) {
+            $randomSlide = collect([
+                'main.partials.slide_1',
+                'main.partials.slide_2',
+                'main.partials.slide_3'
+            ]);
+        } else {
+            $randomSlide = collect([
+                'main.partials.slide_3',
+                'main.partials.slide_2',
+                'main.partials.slide_1'
+            ]);
         }
 
         return view('main.index', compact(

@@ -33,7 +33,8 @@
 
         $('.flexslider').flexslider({
             animation: "slide",
-            directionNav: false
+            controlNav: false,
+            customDirectionNav: $(".custom-navigation a")
         });
     </script>
 </body>
