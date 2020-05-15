@@ -3,18 +3,22 @@
 @section('content')
 
 <div class="mx-3 my-3">
-    <div class="flexslider m-0">
-        <ul class="slides">
+    <div class="flexslider slider-home ">
+        <ul class="slides ">
             @foreach ($randomSlide as $slide)
             @include($slide)
             @endforeach
         </ul>
-    </div>
-    <div class="custom-navigation">
-        <a href="#" class="flex-prev">Prev</a>
-    </div>
-    <div class="custom-navigation">
-        <a href="#" class="flex-next">Next</a>
+        <div class="custom-navigation">
+            <a href="#" class="flex-prev">
+                <i class="fas fa-chevron-left fa-2x"></i>
+            </a>
+            <div class="custom-controls-container"></div>
+            <a href="#" class="flex-next">
+                <i class="fas fa-chevron-right fa-2x"></i>
+            </a>
+        </div>
     </div>
 </div>
+
 @endsection

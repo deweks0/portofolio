@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ $title }}</title>
-
+    
     <!-- FONTS-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 
@@ -23,8 +23,9 @@
 
     <!-- JS -->
     <script src="{{ asset('js/app.js') }}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
     <script>
+
         $('.carousel').carousel({
             interval: 3000
         });
@@ -34,8 +35,13 @@
         $('.flexslider').flexslider({
             animation: "slide",
             controlNav: false,
-            customDirectionNav: $(".custom-navigation a")
+            directionNav:true,
+            // controlsContainer: $(".custom-controls-container"),
+            customDirectionNav: $(".custom-navigation a"), 
+            
         });
+      
+        
     </script>
 </body>
 
