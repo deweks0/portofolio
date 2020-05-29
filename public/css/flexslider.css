@@ -280,6 +280,9 @@ html[xmlns] .flexslider .slides {
     z-index: 999;
 
 }
+.img-small{
+  width: 5%;
+}
 .slider-home{
   position: relative;
 }
