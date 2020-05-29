@@ -323,17 +323,15 @@ html[xmlns] .flexslider .slides {
     z-index: 999;
 
 }
-<<<<<<< HEAD
 
 .slider-home {
     position: relative;
-=======
+}
 .img-small{
   width: 5%;
 }
 .slider-home{
   position: relative;
->>>>>>> ec0699081cd06039e479b79299e3d2620ecb5b9c
 }
 
 .text-black-transparant {
