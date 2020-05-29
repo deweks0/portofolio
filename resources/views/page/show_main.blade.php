@@ -54,12 +54,12 @@
                         <div class="form-group">
                             <label for="left_description">Left Description</label>
                             <textarea name="left_description" id="left_description" class="form-control" cols="30"
-                                rows="5">{{ $page->left_description }}</textarea>
+                                rows="10">{{ $page->left_description }}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="right_description">Right Description</label>
                             <textarea name="right_description" id="right_description" class="form-control" cols="30"
-                                rows="5">{{ $page->right_description }}</textarea>
+                                rows="10">{{ $page->right_description }}</textarea>
                         </div>
                         @endif
                         <button type="submit" class="btn btn-success">Save</button>

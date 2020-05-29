@@ -8,9 +8,14 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_one')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_one')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
-                <div class="project-hover position-absolute">
+                <div class="project-hover project-hover-big position-absolute">
                     {{ $slideThree->where('name', 'project_one')->first()->content }}
                 </div>
             </a>
@@ -23,6 +28,11 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_two')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_two')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="project-hover position-absolute">
@@ -38,6 +48,11 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_ten')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_ten')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="project-hover position-absolute">
@@ -53,6 +68,11 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_eleven')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_eleven')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="project-hover position-absolute">
@@ -68,6 +88,11 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_three')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_three')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="project-hover position-absolute">
@@ -83,6 +108,11 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_four')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_four')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="project-hover position-absolute">
@@ -98,6 +128,11 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_five')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_five')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="project-hover position-absolute">
@@ -113,6 +148,11 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_six')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_six')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="project-hover position-absolute">
@@ -144,6 +184,11 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_seven')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_seven')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="project-hover position-absolute">
@@ -159,6 +204,11 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_eight')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_eight')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="project-hover position-absolute">
@@ -174,6 +224,11 @@
                             <img src="{{ asset('storage/' . $slideThree->where('name', 'project_nine')->first()->images()->first()->src) }}"
                                 alt="">
                         </div>
+                        @foreach ($slideThree->where('name', 'project_nine')->first()->images->skip(1) as $image)
+                        <div class="carousel-item h-100">
+                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="project-hover position-absolute">

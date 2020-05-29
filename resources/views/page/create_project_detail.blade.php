@@ -30,12 +30,12 @@
                                 <div class="w-100 mr-4">
                                     <h5 class="mb-3">Left Description</h5>
                                     <textarea name="left_description" id="left_description" class="form-control"
-                                        rows="6"></textarea>
+                                        rows="10"></textarea>
                                 </div>
                                 <div class="w-100">
                                     <h5 class="mb-3">Right Description</h5>
                                     <textarea name="right_description" id="right_description" class="form-control"
-                                        rows="6"></textarea>
+                                        rows="10"></textarea>
                                 </div>
                             </div>
                             <div class="mr-4 mt-4">

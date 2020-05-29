@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="mx-3 my-3">
-    <div class="flexslider slider-home ">
+<div class="mx-4 mt-3">
+    <div class="flexslider slider-home m-0" id="home-slider">
         <ul class="slides ">
             @foreach ($randomSlide as $slide)
             @include($slide)
@@ -18,6 +18,10 @@
                 <i class="fas fa-chevron-right fa-3x"></i>
             </a>
         </div>
+    </div>
+
+    <div class="d-flex justify-content-end">
+        <!-- for icon -->
     </div>
 </div>
 

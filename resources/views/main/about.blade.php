@@ -5,7 +5,7 @@
     <h5 class="font-weight-bold ml-5 pl-4 my-5 text-uppercase ls-sm">About Lab</h5>
     <div class="row h-75">
         <div class="col-lg-12">
-            <div class="flexslider my-5 py-5">
+            <div class="flexslider my-5 py-5" id="about-slider">
                 <ul class="slides">
                     <li>
                         <div class="row">
@@ -63,6 +63,7 @@
                     </li>
                 </ul>
             </div>
+            <div class="custom-controls-container"></div>
         </div>
     </div>
 

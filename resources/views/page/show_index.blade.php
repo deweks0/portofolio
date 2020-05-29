@@ -77,10 +77,10 @@
                                             Project 4
                                         </div>
                                         <div class="small-box">
-                                            News
+                                            Project 10
                                         </div>
                                         <div class="small-box">
-                                            About
+                                            Project 11
                                         </div>
                                         <div class="small-box">
                                             Project 5
@@ -385,15 +385,18 @@
                                                                 <img src="{{ asset('storage/' . $image->src) }}"
                                                                     class="w-100 h-150px rounded">
                                                             </label>
-                                                            <div class="custom-control custom-radio">
-                                                                <input class="custom-control-input" name="project_one"
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input class="custom-control-input" name="project_one[]"
                                                                     value="{{ $image->id }}"
                                                                     id="image_page[1][image_id][{{$image->id}}]"
-                                                                    type="radio" @if(count($slideOne->where('name',
+                                                                    type="checkbox" @if(count($slideOne->where('name',
                                                                 'project_one')->first()->images) == 0)
                                                                 {{ '' }}
                                                                 @else
-                                                                {{ $slideOne->where('name', 'project_one')->first()->images()->first()->id == $image->id ? 'checked' : ''}}
+                                                                @foreach ($slideOne->where('name',
+                                                                'project_one')->first()->images as $slideImage)
+                                                                {{ $slideImage->id  == $image->id ? 'checked' : ''}}
+                                                                @endforeach
                                                                 @endif>
                                                                 <label class="custom-control-label"
                                                                     for="image_page[1][image_id][{{$image->id}}]"></label>
@@ -441,7 +444,7 @@
                                 <div class="d-flex flex-column border mb-4 rounded card-body">
                                     <section class="grid">
                                         <div class="small-box">
-                                            News
+                                            Project 10
                                         </div>
                                         <div class="small-box">
                                             Project 1
@@ -470,7 +473,7 @@
                                             </div>
                                         </div>
                                         <div class="small-box">
-                                            About
+                                            Project 11
                                         </div>
                                         <div class="small-box">
                                             Project 7
@@ -770,15 +773,19 @@
                                                                     <img src="{{ asset('storage/' . $image->src) }}"
                                                                         class="w-100 h-150px rounded">
                                                                 </label>
-                                                                <div class="custom-control custom-radio">
+                                                                <div class="custom-control custom-checkbox">
                                                                     <input class="custom-control-input"
-                                                                        name="project_one" value="{{ $image->id }}"
+                                                                        name="project_one[]" value="{{ $image->id }}"
                                                                         id="image_page[14][image_id][{{$image->id}}]"
-                                                                        type="radio" @if(count($slideTwo->where('name',
+                                                                        type="checkbox"
+                                                                        @if(count($slideTwo->where('name',
                                                                     'project_one')->first()->images) == 0)
                                                                     {{ '' }}
                                                                     @else
-                                                                    {{ $slideTwo->where('name', 'project_one')->first()->images()->first()->id == $image->id ? 'checked' : ''}}
+                                                                    @foreach ($slideTwo->where('name',
+                                                                    'project_one')->first()->images as $slideImage)
+                                                                    {{ $slideImage->id  == $image->id ? 'checked' : ''}}
+                                                                    @endforeach
                                                                     @endif>
                                                                     <label class="custom-control-label"
                                                                         for="image_page[14][image_id][{{$image->id}}]"></label>
@@ -834,10 +841,10 @@
                                             Project 2
                                         </div>
                                         <div class="small-box">
-                                            News
+                                            Project 10
                                         </div>
                                         <div class="small-box">
-                                            About
+                                            Project 11
                                         </div>
                                         <div class="small-box">
                                             Project 3
@@ -1157,15 +1164,18 @@
                                                                     <img src="{{ asset('storage/' . $image->src) }}"
                                                                         class="w-100 h-150px rounded">
                                                                 </label>
-                                                                <div class="custom-control custom-radio">
+                                                                <div class="custom-control custom-checkbox">
                                                                     <input class="custom-control-input"
-                                                                        name="project_one" value="{{ $image->id }}"
+                                                                        name="project_one[]" value="{{ $image->id }}"
                                                                         id="image_page[27][image_id][{{$image->id}}]"
-                                                                        type="radio"
+                                                                        type="checkbox"
                                                                         @if(count($slideThree->where('name',
                                                                     'project_one')->first()->images) == 0)
                                                                     @else
-                                                                    {{ $slideThree->where('name', 'project_one')->first()->images()->first()->id == $image->id ? 'checked' : ''}}
+                                                                    @foreach ($slideThree->where('name',
+                                                                    'project_one')->first()->images as $slideImage)
+                                                                    {{ $slideImage->id  == $image->id ? 'checked' : ''}}
+                                                                    @endforeach
                                                                     @endif>
                                                                     <label class="custom-control-label"
                                                                         for="image_page[27][image_id][{{$image->id}}]"></label>

@@ -61,12 +61,12 @@
                                 <div class="w-100 mr-4">
                                     <h5 class="mb-3">Left Description</h5>
                                     <textarea name="left_description" id="left_description" class="form-control"
-                                        rows="6">{{ $projectDetail->left_description }}</textarea>
+                                        rows="10">{{ $projectDetail->left_description }}</textarea>
                                 </div>
                                 <div class="w-100">
                                     <h5 class="mb-3">Right Description</h5>
                                     <textarea name="right_description" id="right_description" class="form-control"
-                                        rows="6">{{ $projectDetail->right_description }}</textarea>
+                                        rows="10">{{ $projectDetail->right_description }}</textarea>
                                 </div>
                             </div>
                         </div>
