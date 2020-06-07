@@ -67,10 +67,6 @@ class PageController extends Controller
      */
     public function show(Page $page)
     {
-        if ($page->id > 11) {
-            abort(404);
-        }
-
         return view('page.show', compact('page'));
     }
 

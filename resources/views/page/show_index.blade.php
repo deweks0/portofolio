@@ -77,10 +77,10 @@
                                             Project 4
                                         </div>
                                         <div class="small-box">
-                                            Project 10
+                                            Project 9
                                         </div>
                                         <div class="small-box">
-                                            Project 11
+                                            Project 10
                                         </div>
                                         <div class="small-box">
                                             Project 5
@@ -92,10 +92,10 @@
                                             Project 7
                                         </div>
                                         <div class="small-box">
-                                            Project 8
+                                            Inquiries
                                         </div>
                                         <div class="small-box">
-                                            Project 9
+                                            Project 8
                                         </div>
                                     </section>
 
@@ -138,6 +138,17 @@
                                                         <textarea name="website_info_content" id="website_info_content"
                                                             rows="5" class="form-control"
                                                             placeholder="Website Info">{{ $slideOne->where('name', 'website_info')->first()->content }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="inquiries_content"
+                                                            class="badge badge-success badge-circle w-auto">
+                                                            Inquiries
+                                                        </label>
+                                                        <textarea name="inquiries_content" id="inquiries_content"
+                                                            rows="5" class="form-control"
+                                                            placeholder="Inquiries">{{ $slideOne->where('name', 'inquiries')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -258,18 +269,6 @@
                                                             rows="5">{{ $slideOne->where('name', 'project_ten')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_eleven_content"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            11
-                                                            Hover
-                                                            Content</label>
-                                                        <textarea name="project_eleven_content"
-                                                            id="project_eleven_content" class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_eleven')->first()->content }}</textarea>
-                                                    </div>
-                                                </div>
                                             </div>
                                             </form>
                                         </div>
@@ -363,13 +362,6 @@
                                                         Project 10
                                                     </a>
                                                 </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link mb-sm-3 mb-md-3" id="tabs-icons-slide-11-tab"
-                                                        data-toggle="tab" href="#tabs-icons-slide-11" role="tab"
-                                                        aria-controls="tabs-icons-slide-11" aria-selected="false">
-                                                        Project 11
-                                                    </a>
-                                                </li>
                                             </ul>
                                         </div>
 
@@ -430,8 +422,6 @@
                                                 'project_nine', 'slideId' => 1])
                                                 @include('page.partials.tab_image', ['id' => 10, 'slideName' =>
                                                 'project_ten', 'slideId' => 1])
-                                                @include('page.partials.tab_image', ['id' => 11, 'slideName' =>
-                                                'project_eleven', 'slideId' => 1])
                                             </div>
                                         </div>
                                         </form>
@@ -473,7 +463,7 @@
                                             </div>
                                         </div>
                                         <div class="small-box">
-                                            Project 11
+                                            Inquiries
                                         </div>
                                         <div class="small-box">
                                             Project 7
@@ -525,6 +515,17 @@
                                                         <textarea name="website_info_content" id="website_info_content"
                                                             rows="5" class="form-control"
                                                             placeholder="Website Info">{{ $slideTwo->where('name', 'website_info')->first()->content }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="inquiries_content"
+                                                            class="badge badge-success badge-circle w-auto">
+                                                            Inquiries
+                                                        </label>
+                                                        <textarea name="inquiries_content" id="inquiries_content"
+                                                            rows="5" class="form-control"
+                                                            placeholder="Inquiries">{{ $slideTwo->where('name', 'inquiries')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -645,18 +646,6 @@
                                                             rows="5">{{ $slideTwo->where('name', 'project_ten')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_eleven_content"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            11
-                                                            Hover
-                                                            Content</label>
-                                                        <textarea name="project_eleven_content"
-                                                            id="project_eleven_content" class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_eleven')->first()->content }}</textarea>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                         </form>
@@ -751,13 +740,6 @@
                                                             Project 10
                                                         </a>
                                                     </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link mb-sm-3 mb-md-3" id="tabs-icons-slide-24-tab"
-                                                            data-toggle="tab" href="#tabs-icons-slide-24" role="tab"
-                                                            aria-controls="tabs-icons-slide-24" aria-selected="false">
-                                                            Project 11
-                                                        </a>
-                                                    </li>
                                                 </ul>
                                             </div>
 
@@ -819,8 +801,6 @@
                                                     'project_nine', 'slideId' => 2])
                                                     @include('page.partials.tab_image', ['id' => 23, 'slideName' =>
                                                     'project_ten', 'slideId' => 2])
-                                                    @include('page.partials.tab_image', ['id' => 24, 'slideName' =>
-                                                    'project_eleven', 'slideId' => 2])
                                                 </div>
 
                                             </div>
@@ -844,7 +824,7 @@
                                             Project 10
                                         </div>
                                         <div class="small-box">
-                                            Project 11
+                                            Inquiries
                                         </div>
                                         <div class="small-box">
                                             Project 3
@@ -916,6 +896,17 @@
                                                         <textarea name="website_info_content" id="website_info_content"
                                                             rows="5" class="form-control"
                                                             placeholder="Website Info">{{ $slideThree->where('name', 'website_info')->first()->content }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="inquiries_content"
+                                                            class="badge badge-success badge-circle w-auto">
+                                                            Inquiries
+                                                        </label>
+                                                        <textarea name="inquiries_content" id="inquiries_content"
+                                                            rows="5" class="form-control"
+                                                            placeholder="Inquiries">{{ $slideThree->where('name', 'inquiries')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -1036,18 +1027,6 @@
                                                             rows="5">{{ $slideThree->where('name', 'project_ten')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="project_eleven_content"
-                                                            class="badge badge-success badge-circle w-auto">Project
-                                                            11
-                                                            Hover
-                                                            Content</label>
-                                                        <textarea name="project_eleven_content"
-                                                            id="project_eleven_content" class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_eleven')->first()->content }}</textarea>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                         </form>
@@ -1142,13 +1121,6 @@
                                                             Project 10
                                                         </a>
                                                     </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link mb-sm-3 mb-md-3" id="tabs-icons-slide-37-tab"
-                                                            data-toggle="tab" href="#tabs-icons-slide-37" role="tab"
-                                                            aria-controls="tabs-icons-slide-37" aria-selected="false">
-                                                            Project 11
-                                                        </a>
-                                                    </li>
                                                 </ul>
                                             </div>
 
@@ -1212,9 +1184,6 @@
                                                     'project_nine', 'slideId' => 3])
                                                     @include('page.partials.tab_image', ['id' => 36, 'slideName' =>
                                                     'project_ten', 'slideId' => 3])
-                                                    @include('page.partials.tab_image', ['id' => 37, 'slideName' =>
-                                                    'project_eleven', 'slideId' => 3])
-
                                                 </div>
                                             </div>
                                         </div>

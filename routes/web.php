@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'AppController@index')->name('/');
-Route::get('/about-lab', 'AppController@about')->name('about');
+Route::get('/about', 'AppController@about')->name('about');
 Route::get('/news-update', 'AppController@news')->name('news');
 Route::get('/inquiries', 'AppController@inquiries')->name('inquiries');
 Route::get('/project-{page}', 'AppController@detailProject')->name('project');

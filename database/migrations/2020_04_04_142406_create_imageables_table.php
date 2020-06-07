@@ -14,7 +14,7 @@ class CreateImageablesTable extends Migration
     public function up()
     {
         Schema::create('imageables', function (Blueprint $table) {
-            $table->unsignedBigInteger('image_id');
+            $table->foreignId('image_id')->constrained();
             $table->unsignedBigInteger('imageable_id');
             $table->string('imageable_type');
             $table->timestamps();

@@ -2,6 +2,10 @@
     height: 150px;
 }
 
+.w-30 {
+    width: 30%;
+}
+
 @media screen and (max-width: 768px) {
     .w-md-50 {
         width: 50% !important;
@@ -15,17 +19,48 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 29vh;
+    grid-auto-rows: 26vh;
     grid-gap: 1em;
 }
 
 .project-container {
-    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 65vh;
+
+    &-img {
+        width: 90% !important;
+        height: 100%;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover .project-desc {
+        bottom: 0;
+        height: 100%;
+    }
+}
+
+.project-desc {
+    background-color: rgba($color: #000000, $alpha: 0.35) !important;
+    width: 90%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    bottom: -500px;
+    transition: 0.3s ease-out;
+    color: white;
+    padding: 5rem 3rem 2rem 3rem;
 }
 
 .image-box {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (min-width: 1680px) {
@@ -34,14 +69,11 @@ body {
     }
 
     .grid {
-        grid-auto-rows: 30vh;
+        grid-auto-rows: 28vh;
     }
-}
 
-@media screen and (min-width: 1280px) {
-    .image-box {
-        width: 450px;
-        height: 450px;
+    .project-desc {
+        font-size: 110%;
     }
 }
 
@@ -49,10 +81,6 @@ body {
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
-    /* * {
-            font-size: .5rem;
-        } */
 
     form label,
     form input {
@@ -68,10 +96,47 @@ body {
     }
 }
 
+.mx-6 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.about-container {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+}
+
 @media screen and (max-width: 768px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .mx-6 {
+        margin-left: 3.5rem;
+        margin-right: 3.5rem;
+    }
+
+    .project-desc {
+        width: 100%;
+        bottom: 0;
+        height: 100%;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        font-size: 95%;
+    }
+
+    .project-container {
+        height: 75vh;
+    }
+
+    .project-container-img {
+        width: 100% !important;
+    }
+
+    .about-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -87,10 +152,19 @@ body {
         width: 325px;
         height: 325px;
     }
+
+    .project-desc {
+        font-size: 90%;
+    }
+
+    .about-container {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
 }
 
 .brand {
-    background: transparent !important;
+    background: gray !important;
 }
 
 .brand>div:first-child {
@@ -139,10 +213,6 @@ img {
     line-height: 1.15rem;
 }
 
-.h-100v {
-    height: 100vh !important;
-}
-
 .ls-sm {
     letter-spacing: 3px;
 }
@@ -177,9 +247,36 @@ ol {
     transform: translateY(101%);
     color: white;
     padding: 1rem;
-    background-color: rgba($color: #000000, $alpha: 0.6) !important;
+    background-color: rgba($color: #000000, $alpha: 0.35) !important;
 
     &-big {
-        background-color: rgba($color: #000000, $alpha: 0.4) !important;
+        background-color: rgba($color: #000000, $alpha: 0.35) !important;
+    }
+}
+
+.search-input {
+    border: none;
+    border-bottom: 1px solid black;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.back-btn {
+    font-weight: 600;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+.social-media {
+    width: 35px;
+}
+
+.nav-link {
+    &:hover {
+        color: black;
     }
 }

@@ -89,7 +89,7 @@
                             <li class="nav-item">
                                 <a class="nav-link {{ request()->is('admin/pages') ? 'active' : '' }}"
                                     href="{{ route('pages.index') }}">
-                                    Index
+                                    Home
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -123,7 +123,7 @@
 
                     <div class="collapse show" id="navbar-2">
                         <ul class="nav nav-sm flex-column">
-                            @for ($i = 1; $i <= 11; $i++) <li class="nav-item">
+                            @for ($i = 1; $i <= 10; $i++) <li class="nav-item">
                                 <a class="nav-link {{ request()->is('admin/pages/'.$i) ? 'active' : '' }}"
                                     href="{{ route('pages.show', $i) }}">
                                     Project {{ $i }}

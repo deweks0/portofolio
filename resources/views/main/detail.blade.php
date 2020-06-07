@@ -1,38 +1,47 @@
 @extends('main.app', ['title' => 'PROJECT'])
 
 @section('content')
-<div class="mt-4 mx-4 mb-4 mb-md-2">
-    <div class="flexslider">
+<div class="pt-5 mx-6 mb-3">
+    <div class="ml-3 mt-4 mb-3">
+        <a href="{{ route('/') }}" class="text-decoration-none text-black h1 back-btn">L</a>
+    </div>
+
+    <div class="flexslider pt-5" id="detail-slider">
         <ul class="slides">
             @foreach ($page->projectDetails as $projectDetail)
             <li>
                 <div class="project-container">
-                    <img src="{{ asset('storage/'.$projectDetail->image->src) }}" class="d-block w-100 h-100">
-                </div>
+                    <img src="{{ asset('storage/'.$projectDetail->image->src) }}" class="project-container-img">
 
-                <div class="container-fluid my-4">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="w-25 w-lg-100 mt-3">
+                    <div class="project-desc container-fluid">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="w-50 w-lg-100">
+                                    <p class="pre-line">
+                                        {{ $projectDetail->left_description }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mt-2 text-justify">
                                 <p class="pre-line">
-                                    {{ $projectDetail->left_description }}
+                                    {{ $projectDetail->right_description }}
                                 </p>
                             </div>
-                        </div>
-                        <div class="col-md-7 mt-3 text-justify">
-                            <p class="pre-line">
-                                {{ $projectDetail->right_description }}
-                            </p>
                         </div>
                     </div>
                 </div>
             </li>
             @endforeach
         </ul>
-    </div>
-    <div class="d-flex flex-column ml-3">
-        <span class="text-black-50"> Back To Home</span>
-        <a href="{{ route('/') }}" class="text-black  font-weight-bold">Home</a>
+        <div class="custom-navigation">
+            <a href="#" class="flex-prev-home text-black-transparant img-small">
+                <img src="{{ asset('svg/back.svg') }}" alt="back">
+            </a>
+            <div class="custom-controls-container"></div>
+            <a href="#" class="flex-next-home text-black-transparant  img-small">
+                <img src="{{ asset('svg/next.svg') }}" alt="next">
+            </a>
+        </div>
     </div>
 </div>
 @endsection

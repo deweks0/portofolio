@@ -44,6 +44,10 @@ class SlidesTableSeeder extends Seeder
             ],
             [
                 'slider_id' => $id,
+                'name' => 'inquiries'
+            ],
+            [
+                'slider_id' => $id,
                 'name' => 'project_one'
             ],
             [
@@ -81,11 +85,7 @@ class SlidesTableSeeder extends Seeder
             [
                 'slider_id' => $id,
                 'name' => 'project_ten'
-            ],
-            [
-                'slider_id' => $id,
-                'name' => 'project_eleven'
-            ],
+            ]
         ];
     }
 }

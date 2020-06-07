@@ -28,11 +28,9 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
+        $path = $request->image->store('images', 'public_uploads');
 
-        $file = $request->file('image');
-        $storage = Storage::putFile('public', $file);
-
-        Image::create(['src' => $file->hashName()]);
+        Image::create(['src' => $path]);
 
         session()->flash('message', 'Image successfully uploaded!');
         session()->flash('alert-class', 'alert-success');
@@ -48,7 +46,7 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
-        Storage::delete('/public/' . $image->src);
+        Storage::delete('/storage/' . $image->src);
 
         $image->delete();
 

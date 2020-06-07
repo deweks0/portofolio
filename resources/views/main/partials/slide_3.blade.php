@@ -60,24 +60,9 @@
                 </div>
             </a>
         </div>
-        <div class="small-box project">
-            <a href="{{ route('project', 11) }}">
-                <div class="carousel slide h-100" data-ride="carousel">
-                    <div class="carousel-inner h-100">
-                        <div class="carousel-item active h-100">
-                            <img src="{{ asset('storage/' . $slideThree->where('name', 'project_eleven')->first()->images()->first()->src) }}"
-                                alt="">
-                        </div>
-                        @foreach ($slideThree->where('name', 'project_eleven')->first()->images->skip(1) as $image)
-                        <div class="carousel-item h-100">
-                            <img src="{{ asset('storage/' . $image->src) }}" class="img-fluid">
-                        </div>
-                        @endforeach
-                    </div>
-                </div>
-                <div class="project-hover position-absolute">
-                    {{ $slideThree->where('name', 'project_eleven')->first()->content }}
-                </div>
+        <div class="small-box project bg-white">
+            <a href="{{ route('inquiries') }}" class="nav-link w-100 h-100 text-black pre-line small mx-3 my-2">
+                {{ $slideThree->where('name', 'inquiries')->first()->content }}
             </a>
         </div>
         <div class="small-box project">
@@ -163,7 +148,7 @@
         <div class="brand">
             <div>
                 <a href="{{ route('about') }}"
-                    class="w-100 h-100 text-decoration-none d-flex justify-content-center align-items-center bg-black">
+                    class="w-100 h-100 text-decoration-none d-flex justify-content-center align-items-center bg-dark">
                     <div class="text-white ls-lg h1 mb-0 ml-2">
                         {{ $slideThree->where('name', 'website_name')->first()->content }}</div>
                 </a>

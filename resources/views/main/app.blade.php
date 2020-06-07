@@ -11,7 +11,7 @@
     <title>{{ $title }}</title>
 
     <!-- FONTS-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -39,9 +39,21 @@
             slideshow: false,
             customDirectionNav: $(".custom-navigation a"), 
         });
+
+        $('#detail-slider').flexslider({
+            animation: "slide",
+            controlNav: true,
+            directionNav: true,
+            slideshow: false,
+            customDirectionNav: $(".custom-navigation a"), 
+        });
+
         $('#about-slider').flexslider({
             animation: "slide",
-            controlsContainer: $(".custom-controls-container"),
+            controlNav: true,
+            directionNav: true,
+            slideshow: false,
+            customDirectionNav: $(".custom-navigation a"), 
         });
     </script>
 </body>

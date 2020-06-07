@@ -2,26 +2,35 @@
 
 @section('content')
 
-<div class="mx-4 mt-3">
+<div class="mx-6 mt-5">
     <div class="flexslider slider-home m-0" id="home-slider">
-        <ul class="slides ">
+        <ul class="slides">
             @foreach ($randomSlide as $slide)
             @include($slide)
             @endforeach
         </ul>
         <div class="custom-navigation">
-            <a href="#" class="flex-prev text-black-transparant img-small">
-                <img src="{{asset('svg/back.svg')}}" alt="">
+            <a href="#" class="flex-prev-home text-black-transparant img-small">
+                <img src="{{ asset('svg/back.svg') }}" alt="back">
             </a>
             <div class="custom-controls-container"></div>
-            <a href="#" class="flex-next text-black-transparant  img-small">
-                <img src="{{asset('svg/next.svg')}}" alt="">
+            <a href="#" class="flex-next-home text-black-transparant  img-small">
+                <img src="{{ asset('svg/next.svg') }}" alt="next">
             </a>
         </div>
     </div>
 
-    <div class="d-flex justify-content-end">
-        <!-- for icon -->
+    <div class="mt-4 mx-1 mb-3 d-flex justify-content-between">
+        <div>
+            <span>Search</span>
+            <input type="text" class="ml-2 search-input">
+        </div>
+
+        <div>
+            <a href="#" target="_blank">
+                <img src="{{ asset('svg/instagram.svg') }}" alt="instagram" class="social-media">
+            </a>
+        </div>
     </div>
 </div>
 

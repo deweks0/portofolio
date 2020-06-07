@@ -22,4 +22,15 @@ class Image extends Model
     {
         return $this->hasMany(ProjectDetail::class);
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($image) {
+            $image->pages()->detach();
+            $image->slides()->detach();
+            $image->projectDetails()->delete();
+        });
+    }
 }
