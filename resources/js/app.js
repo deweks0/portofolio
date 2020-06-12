@@ -31,3 +31,46 @@ require('./jquery.flexslider');
 // const app = new Vue({
 //     el: '#app',
 // });
+
+setInterval(function () {
+    randomBoxSlideOne();
+    randomBoxSlideOne();
+
+    randomBoxSlideTwo();
+    randomBoxSlideTwo();
+
+    randomBoxSlideThree();
+    randomBoxSlideThree();
+}, 5000);
+
+function randomBoxSlideOne() {
+    let slideOneProjectNumber = Math.round(Math.random() * 10);
+
+    if (slideOneProjectNumber >= 3) {
+        $(`#slide-1-inquiries`)
+            .insertAfter(`#slide-1-project-${slideOneProjectNumber}`)
+    } else {
+        $(`#slide-1-project-${Math.floor(Math.random() * 2) + 1}`)
+            .insertAfter(`#slide-1-project-3`)
+    }
+}
+
+function randomBoxSlideTwo() {
+    let slideOneProjectNumber = Math.round(Math.random() * 10);
+
+    if (slideOneProjectNumber < 6) {
+        $(`#slide-2-inquiries`)
+            .insertAfter(`#slide-2-project-${slideOneProjectNumber}`)
+    } else {
+        $(`#slide-2-project-${Math.floor(Math.random() * 3) + 7}`)
+            .insertAfter(`#slide-2-project-6`)
+    }
+}
+
+function randomBoxSlideThree() {
+    $(`#slide-3-inquiries`)
+        .insertAfter(`#slide-3-project-${Math.round(Math.random() * 10)}`);
+
+    $(`#slide-3-project-${Math.round(Math.random() * 10)}}`)
+        .insertAfter(`#slide-3-project-${Math.round(Math.random() * 10)}`);
+}

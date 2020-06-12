@@ -63,18 +63,27 @@ body {
     height: 100%;
 }
 
+.home-container {
+    margin: 4% 6% 0 6%;
+}
+
 @media screen and (min-width: 1680px) {
     .small {
         font-size: 100% !important;
     }
 
     .grid {
-        grid-auto-rows: 28vh;
+        grid-auto-rows: 27vh;
     }
 
     .project-desc {
         font-size: 110%;
     }
+
+    .home-container {
+        margin: 3.5% 5.5% 0 5.5%;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -137,6 +146,10 @@ body {
         padding-right: 4rem;
     }
 
+
+    .home-container {
+        margin: 6% 8% 0 8%;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -160,6 +173,10 @@ body {
     .about-container {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
+    }
+
+    .home-container {
+        margin: 8% 10% 0 10%;
     }
 }
 
@@ -248,9 +265,11 @@ ol {
     color: white;
     padding: 1rem;
     background-color: rgba($color: #000000, $alpha: 0.35) !important;
+    white-space: pre-line;
 
     &-big {
         background-color: rgba($color: #000000, $alpha: 0.35) !important;
+        white-space: pre-line;
     }
 }
 

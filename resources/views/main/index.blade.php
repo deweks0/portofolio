@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="mx-6 mt-5">
+<div class="home-container">
     <div class="flexslider slider-home m-0" id="home-slider">
         <ul class="slides">
             @foreach ($randomSlide as $slide)

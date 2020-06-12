@@ -21,16 +21,16 @@ class AppController extends Controller
             }
         }
 
-        if (now()->second <= 25) {
+        if (now()->second <= 20) {
             $randomSlide = collect([
-                'main.partials.slide_2',
                 'main.partials.slide_1',
+                'main.partials.slide_2',
                 'main.partials.slide_3'
             ]);
-        } else if (now()->second >= 25 && now()->second <= 50) {
+        } else if (now()->second >= 21 && now()->second <= 40) {
             $randomSlide = collect([
-                'main.partials.slide_1',
                 'main.partials.slide_2',
+                'main.partials.slide_1',
                 'main.partials.slide_3'
             ]);
         } else {
