@@ -8,27 +8,30 @@
 
     <div class="flexslider pt-5" id="detail-slider">
         <ul class="slides">
-            @foreach ($page->projectDetails as $projectDetail)
             <li>
                 <div class="project-container">
-                    <img src="{{ asset('storage/'.$projectDetail->image->src) }}" class="project-container-img">
-
                     <div class="project-desc container-fluid">
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="w-50 w-lg-100">
                                     <p class="pre-line">
-                                        {{ $projectDetail->left_description }}
+                                        {{ $page->projectDetails->first()->left_description }}
                                     </p>
                                 </div>
                             </div>
                             <div class="col-md-7 mt-2 text-justify">
                                 <p class="pre-line">
-                                    {{ $projectDetail->right_description }}
+                                    {{ $page->projectDetails->first()->right_description }}
                                 </p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </li>
+            @foreach ($page->projectDetails as $projectDetail)
+            <li>
+                <div class="project-container">
+                    <img src="{{ asset('storage/'.$projectDetail->image->src) }}" class="project-container-img">
                 </div>
             </li>
             @endforeach

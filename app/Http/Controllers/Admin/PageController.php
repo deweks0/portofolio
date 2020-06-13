@@ -98,16 +98,18 @@ class PageController extends Controller
         return back();
     }
 
-    public function updateImage()
+    public function updateImage(Page $page)
     {
-        $page = Page::find(11);
-
         $page->images()->sync(request('images'));
 
         session()->flash('message', $page->title . ' Slider Image successfully updated!');
         session()->flash('alert-class', 'alert-info');
 
-        return redirect(route('pages.about'));
+        if ($page->id == 11) {
+            return redirect(route('pages.about'));
+        } else {
+            return redirect(route('pages.index'));
+        }
     }
 
     public function deleteImage()
@@ -138,9 +140,8 @@ class PageController extends Controller
         return view('page.show_main', compact('page'));
     }
 
-    public function chooseImage()
+    public function chooseImage(Page $page)
     {
-        $page = Page::find(11);
         $images = Image::all();
 
         return view('page.choose_image', compact('images', 'page'));

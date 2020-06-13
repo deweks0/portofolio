@@ -3,16 +3,14 @@
         <div class="brand" id="slide-1-brand">
             <div>
                 <a href="{{ route('about') }}"
-                    class="w-100 h-100 text-decoration-none d-flex justify-content-center align-items-center bg-dark">
-                    <div class="text-white ls-lg h1 mb-0 ml-2">
-                        {{ $slideOne->where('name', 'website_name')->first()->content }}</div>
+                    class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
+                    <img src="{{ asset('storage/images/LOGO.png') }}" class="img-website-name">
                 </a>
             </div>
             <div>
-                <a href="{{ route('news') }}" class="w-100 h-100 text-decoration-none d-flex bg-black px-4 py-4">
-                    <div class="text-white small font-weight-light">
-                        {{ $slideOne->where('name', 'website_info')->first()->content }}
-                    </div>
+                <a href="{{ route('news') }}"
+                    class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
+                    <img src="{{ asset('storage/images/NEWS.png') }}" class="img-website-news">
                 </a>
             </div>
         </div>
@@ -204,8 +202,9 @@
             </a>
         </div>
         <div class="small-box project bg-white" id="slide-1-inquiries">
-            <a href="{{ route('inquiries') }}" class="nav-link w-100 h-100 text-black pre-line small mx-3 my-2">
-                {{ $slideOne->where('name', 'inquiries')->first()->content }}
+            <a href="{{ route('inquiries') }}"
+                class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
+                <img src="{{ asset('storage/images/INQUIRIES.png') }}" class="img-inquiries">
             </a>
         </div>
         <div class="small-box project" id="slide-1-project-8">

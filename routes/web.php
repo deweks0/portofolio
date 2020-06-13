@@ -42,8 +42,8 @@ Route::prefix('admin')->namespace('Admin')->middleware(['auth'])->group(function
 	Route::put('/pages/{page}/projectDetails/{projectDetail}', 'ProjectDetailController@updateImage')->name('projectDetails.update_image');
 
 	Route::get('/pages/main/about', 'PageController@about')->name('pages.about');
-	Route::get('/pages/main/about/choose-image', 'PageController@chooseImage')->name('pages.choose_image');
-	Route::post('/pages/main/about/choose-image', 'PageController@updateImage')->name('pages.update_image');
+	Route::get('/pages/main/{page}/choose-image', 'PageController@chooseImage')->name('pages.choose_image');
+	Route::post('/pages/main/{page}/choose-image', 'PageController@updateImage')->name('pages.update_image');
 	Route::delete('/pages/main/about', 'PageController@deleteImage')->name('pages.delete_image');
 	Route::get('/pages/main/news-update', 'PageController@news')->name('pages.news');
 	Route::get('/pages/main/inquiries', 'PageController@inquiries')->name('pages.inquiries');

@@ -17,7 +17,7 @@
                     </a>
                 </div>
                 <hr class="my-1">
-                <form action="{{ route('pages.update_image') }}" method="POST" id="form-choose">
+                <form action="{{ route('pages.update_image', $page->id) }}" method="POST" id="form-choose">
                     @csrf
                     <div class="card-body d-flex flex-wrap justify-content-around">
                         @forelse ($images as $image)

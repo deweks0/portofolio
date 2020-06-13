@@ -22,7 +22,7 @@ class PagesTableSeeder extends Seeder
             ['title' => 'Project 7'],
             ['title' => 'Project 8'],
             ['title' => 'Project 9'],
-            ['title' => 'Index'],
+            ['title' => 'Home'],
             [
                 'title' => 'About Lab',
                 'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus soluta voluptates doloremque? Similique eum unde cum ut reiciendis consectetur accusantium.
@@ -41,7 +41,7 @@ class PagesTableSeeder extends Seeder
             [
                 'title' => 'Inquiries',
                 'description' => 'For enquiries lor sit amet consectetur adipisicing elit. Saepe eos doloribus quis, culpa iusto unde sunt quam quas nemo. Accusamus dolor impedit repellendus praesentium debitis eum repudiandae laudantium suscipit possimus cumque? Atque maiores quaerat, quae ipsam aut expedita '
-            ],
+            ]
         ];
 
         foreach ($pages as $page) {

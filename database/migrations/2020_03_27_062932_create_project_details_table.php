@@ -17,8 +17,6 @@ class CreateProjectDetailsTable extends Migration
             $table->id();
             $table->foreignId('page_id')->constrained();
             $table->foreignId('image_id')->constrained();
-            $table->text('left_description')->nullable();
-            $table->text('right_description')->nullable();
             $table->timestamps();
         });
     }

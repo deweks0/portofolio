@@ -1,7 +1,6 @@
 @extends('main.app', ['title' => 'HOME'])
 
 @section('content')
-
 <div class="home-container">
     <div class="flexslider slider-home m-0" id="home-slider">
         <ul class="slides">
@@ -10,11 +9,11 @@
             @endforeach
         </ul>
         <div class="custom-navigation">
-            <a href="#" class="flex-prev-home text-black-transparant img-small">
+            <a href="#" class="flex-prev flex-prev-home text-black-transparant img-small">
                 <img src="{{ asset('svg/back.svg') }}" alt="back">
             </a>
             <div class="custom-controls-container"></div>
-            <a href="#" class="flex-next-home text-black-transparant  img-small">
+            <a href="#" class="flex-next flex-next-home text-black-transparant img-small">
                 <img src="{{ asset('svg/next.svg') }}" alt="next">
             </a>
         </div>
@@ -33,5 +32,10 @@
         </div>
     </div>
 </div>
-
 @endsection
+
+@push('js')
+<script>
+    let randomDuration = 5000;
+</script>
+@endpush

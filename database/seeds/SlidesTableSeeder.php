@@ -36,18 +36,6 @@ class SlidesTableSeeder extends Seeder
         return [
             [
                 'slider_id' => $id,
-                'name' => 'website_name'
-            ],
-            [
-                'slider_id' => $id,
-                'name' => 'website_info'
-            ],
-            [
-                'slider_id' => $id,
-                'name' => 'inquiries'
-            ],
-            [
-                'slider_id' => $id,
                 'name' => 'project_one'
             ],
             [

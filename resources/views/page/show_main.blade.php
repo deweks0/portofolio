@@ -28,7 +28,7 @@
                     <div class="d-flex flex-column border mb-4 rounded card-body">
                         <div class="d-flex mb-4">
                             <h4 class="mr-3 mb-0">Slider Images</h4>
-                            <a href="{{ route('pages.choose_image') }}" class="btn btn-sm btn-primary">Choose
+                            <a href="{{ route('pages.choose_image', 11) }}" class="btn btn-sm btn-primary">Choose
                                 Image</a>
                         </div>
 
@@ -48,18 +48,18 @@
                         <div class="form-group">
                             <label for="description">Description</label>
                             <textarea name="description" id="description" class="form-control" cols="30"
-                                rows="15">{{ $page->description }}</textarea>
+                                rows="20">{{ $page->description }}</textarea>
                         </div>
                         @if ($page->id == 11)
                         <div class="form-group">
                             <label for="left_description">Left Description</label>
                             <textarea name="left_description" id="left_description" class="form-control" cols="30"
-                                rows="10">{{ $page->left_description }}</textarea>
+                                rows="15">{{ $page->left_description }}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="right_description">Right Description</label>
                             <textarea name="right_description" id="right_description" class="form-control" cols="30"
-                                rows="10">{{ $page->right_description }}</textarea>
+                                rows="15">{{ $page->right_description }}</textarea>
                         </div>
                         @endif
                         <button type="submit" class="btn btn-success">Save</button>

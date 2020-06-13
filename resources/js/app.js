@@ -41,7 +41,7 @@ setInterval(function () {
 
     randomBoxSlideThree();
     randomBoxSlideThree();
-}, 5000);
+}, randomDuration);
 
 function randomBoxSlideOne() {
     let slideOneProjectNumber = Math.round(Math.random() * 10);
@@ -50,8 +50,12 @@ function randomBoxSlideOne() {
         $(`#slide-1-inquiries`)
             .insertAfter(`#slide-1-project-${slideOneProjectNumber}`)
     } else {
-        $(`#slide-1-project-${Math.floor(Math.random() * 2) + 1}`)
-            .insertAfter(`#slide-1-project-3`)
+        let box1 = $(`#slide-1-project-1`);
+        let box2 = $(`#slide-1-project-3`);
+
+        box1.insertBefore(box2);
+        box1.toggleClass('small-box').toggleClass('big-box');
+        box2.toggleClass('big-box').toggleClass('small-box');
     }
 }
 
@@ -62,15 +66,27 @@ function randomBoxSlideTwo() {
         $(`#slide-2-inquiries`)
             .insertAfter(`#slide-2-project-${slideOneProjectNumber}`)
     } else {
-        $(`#slide-2-project-${Math.floor(Math.random() * 3) + 7}`)
-            .insertAfter(`#slide-2-project-6`)
+        let box1 = $(`#slide-2-project-5`);
+        let box2 = $(`#slide-2-project-6`);
+
+        box1.insertBefore(box2);
+        box1.toggleClass('small-box').toggleClass('big-box');
+        box2.toggleClass('big-box').toggleClass('small-box');
     }
 }
 
 function randomBoxSlideThree() {
-    $(`#slide-3-inquiries`)
-        .insertAfter(`#slide-3-project-${Math.round(Math.random() * 10)}`);
+    let slideOneProjectNumber = Math.round(Math.random() * 10);
 
-    $(`#slide-3-project-${Math.round(Math.random() * 10)}}`)
-        .insertAfter(`#slide-3-project-${Math.round(Math.random() * 10)}`);
+    if (slideOneProjectNumber > 1) {
+        $(`#slide-3-inquiries`)
+            .insertAfter(`#slide-3-project-${slideOneProjectNumber}`);
+    } else {
+        let box1 = $(`#slide-3-project-1`);
+        let box2 = $(`#slide-3-project-2`);
+
+        box1.insertBefore(box2);
+        box1.toggleClass('small-box').toggleClass('big-box');
+        box2.toggleClass('big-box').toggleClass('small-box');
+    }
 }

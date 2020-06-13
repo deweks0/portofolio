@@ -121,45 +121,13 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="website_name_content"
-                                                            class="badge badge-success badge-circle w-auto">Website
-                                                            Name</label>
-                                                        <input class="form-control" type="text"
-                                                            name="website_name_content" id="website_name_content"
-                                                            placeholder="Website Name"
-                                                            value="{{ $slideOne->where('name', 'website_name')->first()->content }}">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="website_info_content"
-                                                            class="badge badge-success badge-circle w-auto">Website
-                                                            Info</label>
-                                                        <textarea name="website_info_content" id="website_info_content"
-                                                            rows="5" class="form-control"
-                                                            placeholder="Website Info">{{ $slideOne->where('name', 'website_info')->first()->content }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="inquiries_content"
-                                                            class="badge badge-success badge-circle w-auto">
-                                                            Inquiries
-                                                        </label>
-                                                        <textarea name="inquiries_content" id="inquiries_content"
-                                                            rows="5" class="form-control"
-                                                            placeholder="Inquiries">{{ $slideOne->where('name', 'inquiries')->first()->content }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
                                                         <label for="project_one_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             1
                                                             Hover Content</label>
                                                         <textarea name="project_one_content" id="project_one_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_one')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideOne->where('name', 'project_one')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -170,7 +138,7 @@
                                                             Hover Content</label>
                                                         <textarea name="project_two_content" id="project_two_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_two')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideOne->where('name', 'project_two')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -182,7 +150,7 @@
                                                             Content</label>
                                                         <textarea name="project_three_content"
                                                             id="project_three_content" class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_three')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideOne->where('name', 'project_three')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -194,7 +162,7 @@
                                                             Content</label>
                                                         <textarea name="project_four_content" id="project_four_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_four')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideOne->where('name', 'project_four')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -206,7 +174,7 @@
                                                             Content</label>
                                                         <textarea name="project_five_content" id="project_five_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_five')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideOne->where('name', 'project_five')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -218,7 +186,7 @@
                                                             Content</label>
                                                         <textarea name="project_six_content" id="project_six_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_six')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideOne->where('name', 'project_six')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -230,7 +198,7 @@
                                                             Content</label>
                                                         <textarea name="project_seven_content"
                                                             id="project_seven_content" class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_seven')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideOne->where('name', 'project_seven')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -242,7 +210,7 @@
                                                             Content</label>
                                                         <textarea name="project_eight_content"
                                                             id="project_eight_content" class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_eight')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideOne->where('name', 'project_eight')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -254,7 +222,7 @@
                                                             Content</label>
                                                         <textarea name="project_nine_content" id="project_nine_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_nine')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideOne->where('name', 'project_nine')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -266,7 +234,7 @@
                                                             Content</label>
                                                         <textarea name="project_ten_content" id="project_ten_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideOne->where('name', 'project_ten')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideOne->where('name', 'project_ten')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -498,45 +466,13 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="website_name_content"
-                                                            class="badge badge-success badge-circle w-auto">Website
-                                                            Name</label>
-                                                        <input class="form-control" type="text"
-                                                            name="website_name_content" id="website_name_content"
-                                                            placeholder="Website Name"
-                                                            value="{{ $slideTwo->where('name', 'website_name')->first()->content }}">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="website_info_content"
-                                                            class="badge badge-success badge-circle w-auto">Website
-                                                            Info</label>
-                                                        <textarea name="website_info_content" id="website_info_content"
-                                                            rows="5" class="form-control"
-                                                            placeholder="Website Info">{{ $slideTwo->where('name', 'website_info')->first()->content }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="inquiries_content"
-                                                            class="badge badge-success badge-circle w-auto">
-                                                            Inquiries
-                                                        </label>
-                                                        <textarea name="inquiries_content" id="inquiries_content"
-                                                            rows="5" class="form-control"
-                                                            placeholder="Inquiries">{{ $slideTwo->where('name', 'inquiries')->first()->content }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
                                                         <label for="project_one_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             1
                                                             Hover Content</label>
                                                         <textarea name="project_one_content" id="project_one_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_one')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideTwo->where('name', 'project_one')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -547,7 +483,7 @@
                                                             Hover Content</label>
                                                         <textarea name="project_two_content" id="project_two_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_two')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideTwo->where('name', 'project_two')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -559,7 +495,7 @@
                                                             Content</label>
                                                         <textarea name="project_three_content"
                                                             id="project_three_content" class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_three')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideTwo->where('name', 'project_three')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -571,7 +507,7 @@
                                                             Content</label>
                                                         <textarea name="project_four_content" id="project_four_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_four')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideTwo->where('name', 'project_four')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -583,7 +519,7 @@
                                                             Content</label>
                                                         <textarea name="project_five_content" id="project_five_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_five')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideTwo->where('name', 'project_five')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -595,7 +531,7 @@
                                                             Content</label>
                                                         <textarea name="project_six_content" id="project_six_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_six')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideTwo->where('name', 'project_six')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -607,7 +543,7 @@
                                                             Content</label>
                                                         <textarea name="project_seven_content"
                                                             id="project_seven_content" class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_seven')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideTwo->where('name', 'project_seven')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -619,7 +555,7 @@
                                                             Content</label>
                                                         <textarea name="project_eight_content"
                                                             id="project_eight_content" class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_eight')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideTwo->where('name', 'project_eight')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -631,7 +567,7 @@
                                                             Content</label>
                                                         <textarea name="project_nine_content" id="project_nine_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_nine')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideTwo->where('name', 'project_nine')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -643,7 +579,7 @@
                                                             Content</label>
                                                         <textarea name="project_ten_content" id="project_ten_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideTwo->where('name', 'project_ten')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideTwo->where('name', 'project_ten')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -879,45 +815,13 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="website_name_content"
-                                                            class="badge badge-success badge-circle w-auto">Website
-                                                            Name</label>
-                                                        <input class="form-control" type="text"
-                                                            name="website_name_content" id="website_name_content"
-                                                            placeholder="Website Name"
-                                                            value="{{ $slideThree->where('name', 'website_name')->first()->content }}">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="website_info_content"
-                                                            class="badge badge-success badge-circle w-auto">Website
-                                                            Info</label>
-                                                        <textarea name="website_info_content" id="website_info_content"
-                                                            rows="5" class="form-control"
-                                                            placeholder="Website Info">{{ $slideThree->where('name', 'website_info')->first()->content }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="inquiries_content"
-                                                            class="badge badge-success badge-circle w-auto">
-                                                            Inquiries
-                                                        </label>
-                                                        <textarea name="inquiries_content" id="inquiries_content"
-                                                            rows="5" class="form-control"
-                                                            placeholder="Inquiries">{{ $slideThree->where('name', 'inquiries')->first()->content }}</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
                                                         <label for="project_one_content"
                                                             class="badge badge-success badge-circle w-auto">Project
                                                             1
                                                             Hover Content</label>
                                                         <textarea name="project_one_content" id="project_one_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_one')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideThree->where('name', 'project_one')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -928,7 +832,7 @@
                                                             Hover Content</label>
                                                         <textarea name="project_two_content" id="project_two_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_two')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideThree->where('name', 'project_two')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -940,7 +844,7 @@
                                                             Content</label>
                                                         <textarea name="project_three_content"
                                                             id="project_three_content" class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_three')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideThree->where('name', 'project_three')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -952,7 +856,7 @@
                                                             Content</label>
                                                         <textarea name="project_four_content" id="project_four_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_four')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideThree->where('name', 'project_four')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -964,7 +868,7 @@
                                                             Content</label>
                                                         <textarea name="project_five_content" id="project_five_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_five')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideThree->where('name', 'project_five')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -976,7 +880,7 @@
                                                             Content</label>
                                                         <textarea name="project_six_content" id="project_six_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_six')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideThree->where('name', 'project_six')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -988,7 +892,7 @@
                                                             Content</label>
                                                         <textarea name="project_seven_content"
                                                             id="project_seven_content" class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_seven')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideThree->where('name', 'project_seven')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -1000,7 +904,7 @@
                                                             Content</label>
                                                         <textarea name="project_eight_content"
                                                             id="project_eight_content" class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_eight')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideThree->where('name', 'project_eight')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -1012,7 +916,7 @@
                                                             Content</label>
                                                         <textarea name="project_nine_content" id="project_nine_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_nine')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideThree->where('name', 'project_nine')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -1024,7 +928,7 @@
                                                             Content</label>
                                                         <textarea name="project_ten_content" id="project_ten_content"
                                                             class="form-control"
-                                                            rows="5">{{ $slideThree->where('name', 'project_ten')->first()->content }}</textarea>
+                                                            rows="7">{{ $slideThree->where('name', 'project_ten')->first()->content }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
