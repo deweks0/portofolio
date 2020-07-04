@@ -19,7 +19,7 @@ class PageController extends Controller
     public function index()
     {
         $page = Page::where('title', 'LIKE', '%home%')->first();
-        $images = Image::all();
+        $images = Image::where('src', 'LIKE', '%_thumb%')->get();
         $slideOne = Slide::with('images')->where('slider_id', 1)->get();
         $slideTwo = Slide::with('images')->where('slider_id', 2)->get();
         $slideThree = Slide::with('images')->where('slider_id', 3)->get();
@@ -125,7 +125,7 @@ class PageController extends Controller
 
     public function chooseImage(Page $page)
     {
-        $images = Image::all();
+        $images = Image::where('src', 'LIKE', '%_thumb%')->get();
 
         return view('page.choose_image', compact('images', 'page'));
     }

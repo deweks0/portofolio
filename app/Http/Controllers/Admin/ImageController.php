@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Spatie\ImageOptimizer\OptimizerChainFactory;
-use ImageOptimizer;
+use Intervention\Image\Facades\Image as InvImage;
+use Illuminate\Support\Str;
 
 class ImageController extends Controller
 {
@@ -18,7 +18,8 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $images = Image::all();
+        $images = Image::where('src', 'LIKE', '%_thumb%')->get();
+
         return view('image.index', compact('images'));
     }
 
@@ -30,10 +31,32 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        $path = $request->image->store('images', 'public_uploads');
+        $basename = Str::random();
+        $originalPath = 'images/' . $basename . '.' . $request->image->getClientOriginalExtension();
+        $thumbnailPath =  'images/' . $basename . '_thumb.' . $request->image->getClientOriginalExtension();
 
-        Image::create(['src' => $path]);
+        ini_set('memory_limit', '256M');
+        $thumbnail = InvImage::make($request->image);
 
+        Image::create(['src' => $thumbnailPath]);
+
+        if ($thumbnail->filesize() >= 1024000) {
+            $thumbnail->resize(null, 800, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->save(public_path('storage/' . $thumbnailPath));
+        } else {
+            $thumbnail->resize(null, 1600, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->save(public_path('storage/' . $thumbnailPath));
+        }
+
+        Image::create(['src' => $originalPath]);
+
+        $request->image->move(public_path('storage/images'), $originalPath);
+
+        session()->flash('message', 'Image successfully uploaded!');
         session()->flash('alert-class', 'alert-success');
 
         return redirect(route('images.index'));
@@ -47,7 +70,10 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
+        $thumbnailImg = explode('.', $image->src)[0] . '_thumb.' . explode('.', $image->src)[1];
+
         Storage::delete('/storage/' . $image->src);
+        Storage::delete('/storage/' . $thumbnailImg);
 
         $image->delete();
 
