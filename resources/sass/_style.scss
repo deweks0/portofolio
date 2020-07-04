@@ -19,21 +19,26 @@ body {
     grid-gap: 1em;
 }
 
-.project-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 65vh;
+.detail-slider {
+    margin-bottom: 0 !important;
+    margin-top: 2% !important;
 
-    &-img {
-        width: 90% !important;
-        height: 100%;
+    .slides {
+        display: flex;
+        align-items: center;
     }
 }
 
-.project-desc {
-    width: 90%;
-    padding: 5rem 3rem 2rem 3rem;
+.project-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    & img {
+        width: auto !important;
+        max-width: 100% !important;
+        height: 75vh !important;
+    }
 }
 
 .image-box {
@@ -45,6 +50,36 @@ body {
     margin: 4% 6% 0 6%;
 }
 
+.about-container {
+    margin-top: 1.5% !important;
+    margin-bottom: 0 !important;
+}
+
+.about-slide {
+    padding-top: 2.2%;
+}
+
+.about-desc,
+.project-desc {
+    font-size: 0.8rem;
+}
+
+@media screen and (max-height: 766px) {
+    .about-container {
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (min-height: 766px) {
+    .about-wrapper {
+        margin-top: 3rem !important;
+    }
+
+    .detail-wrapper {
+        margin-top: 3rem !important;
+    }
+}
+
 @media screen and (min-width: 1680px) {
     .small {
         font-size: 100% !important;
@@ -54,14 +89,24 @@ body {
         grid-auto-rows: 27vh;
     }
 
-    .project-desc {
-        font-size: 110%;
-    }
-
     .home-container {
         margin: 3.5% 5.5% 0 5.5%;
     }
 
+    .about-container {
+        margin-top: 5% !important;
+    }
+
+    .about-desc,
+    .project-desc {
+        font-size: 1.2rem;
+    }
+
+    .project-container {
+        & img {
+            height: 80vh !important;
+        }
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -81,6 +126,12 @@ body {
     h3 {
         font-size: medium !important;
     }
+
+    .project-container {
+        & img {
+            height: auto !important;
+        }
+    }
 }
 
 .mx-6 {
@@ -88,9 +139,10 @@ body {
     margin-right: 5rem;
 }
 
-.about-container {
-    padding-left: 5.5rem;
-    padding-right: 5.5rem;
+.back-fixed {
+    position: fixed;
+    left: 4.5rem;
+    bottom: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -111,28 +163,23 @@ body {
         font-size: 95%;
     }
 
-    .project-container {
-        height: 75vh;
-    }
-
-    .project-container-img {
-        width: 100% !important;
-    }
-
-    .about-container {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-
-
     .home-container {
         margin: 6% 8% 0 8%;
+    }
+
+    .back-fixed {
+        position: static;
+        left: 0;
+        bottom: 0;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 1rem;
     }
 }
 
 @media screen and (max-width: 576px) {
     .grid {
-        grid-auto-rows: 25vh;
+        grid-auto-rows: 18vh;
     }
 
     .carousel-detail {
@@ -148,13 +195,18 @@ body {
         font-size: 90%;
     }
 
-    .about-container {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-    }
-
     .home-container {
         margin: 8% 10% 0 10%;
+    }
+
+    .about-container {
+        margin-top: 2rem !important;
+    }
+
+    .about-wrapper {
+        & h5 {
+            margin-top: 3rem !important;
+        }
     }
 }
 
@@ -164,27 +216,19 @@ body {
 
 .brand>div {
     height: calc(96.5% / 2);
-    background: #e4e4e4;
     position: relative;
 }
 
 .small-box {
     grid-area: span 1 / span 1;
-    background: #e4e4e4;
     position: relative;
     overflow: hidden;
 }
 
 .big-box {
     grid-area: span 2 / span 2;
-    background: #e4e4e4;
     position: relative;
     overflow: hidden;
-}
-
-img {
-    width: 100%;
-    height: 100% !important;
 }
 
 .text-black {
@@ -257,31 +301,14 @@ ol {
 }
 
 .back-btn {
-    font-weight: 600;
-
-    &:hover {
-        color: inherit;
-    }
+    width: 35px;
+    height: 35px;
 }
 
 .social-media {
     width: 35px;
 }
 
-.img-website-name {
-    width: 190% !important;
-    height: 340% !important;
-    margin-top: 1.6rem;
-}
-
-.img-website-news {
-    width: 185% !important;
-    height: 325% !important;
-    margin-top: -2.7rem;
-}
-
-.img-inquiries {
-    margin-left: 2rem;
-    width: 200% !important;
-    height: 140% !important;
+.carousel-item img {
+    height: 100% !important;
 }

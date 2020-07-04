@@ -4,13 +4,13 @@
             <div>
                 <a href="{{ route('about') }}"
                     class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                    <img src="{{ asset('storage/images/LOGO.png') }}" class="img-website-name">
+                    <img src="{{ asset('svg/LAB LOGO.png') }}" class="w-100 h-100">
                 </a>
             </div>
             <div>
                 <a href="{{ route('news') }}"
                     class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                    <img src="{{ asset('storage/images/NEWS.png') }}" class="img-website-news">
+                    <img src="{{ asset('svg/LAB NEWS.png') }}" class="w-100 h-100">
                 </a>
             </div>
         </div>
@@ -113,7 +113,7 @@
                 </div>
 
                 <div class="project-hover position-absolute">
-                    {{ $slideOne->where('name', 'project_ten')->first()->content }}
+                    {{ $slideOne->where('name', 'project_nine')->first()->content }}
                 </div>
             </a>
         </div>
@@ -201,11 +201,19 @@
                 </div>
             </a>
         </div>
-        <div class="small-box project bg-white" id="slide-1-inquiries">
-            <a href="{{ route('inquiries') }}"
-                class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                <img src="{{ asset('storage/images/INQUIRIES.png') }}" class="img-inquiries">
-            </a>
+        <div class="brand" id="slide-1-inquiries">
+            <div>
+                <a href="{{ route('inquiries') }}"
+                    class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
+                    <img src="{{ asset('svg/LAB INQUIRIES.png') }}" class="w-100 h-100">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/explore/tags/localarchitecturebureau/" target="_blank"
+                    class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
+                    <img src="{{ asset('svg/LAB MEDIA.png') }}" class="w-100 h-100">
+                </a>
+            </div>
         </div>
         <div class="small-box project" id="slide-1-project-8">
             <a href="{{ route('project', 8) }}">

@@ -1,7 +1,7 @@
 <li>
     <section class="grid">
         <div class="big-box project" id="slide-3-project-1">
-            <a href="{{ route('project', 1) }}">
+            <a href="{{ route('project', 21) }}">
                 <div class="carousel slide h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
@@ -21,7 +21,7 @@
             </a>
         </div>
         <div class="small-box project" id="slide-3-project-2">
-            <a href="{{ route('project', 2) }}">
+            <a href="{{ route('project', 22) }}">
                 <div class="carousel slide h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
@@ -41,7 +41,7 @@
             </a>
         </div>
         <div class="small-box project" id="slide-3-project-10">
-            <a href="{{ route('project', 10) }}">
+            <a href="{{ route('project', 30) }}">
                 <div class="carousel slide h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
@@ -60,14 +60,22 @@
                 </div>
             </a>
         </div>
-        <div class="small-box project bg-white" id="slide-3-inquiries">
-            <a href="{{ route('inquiries') }}"
-                class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                <img src="{{ asset('storage/images/INQUIRIES.png') }}" class="img-inquiries">
-            </a>
+        <div class="brand" id="slide-3-inquiries">
+            <div>
+                <a href="{{ route('inquiries') }}"
+                    class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
+                    <img src="{{ asset('svg/LAB INQUIRIES.png') }}" class="w-100 h-100">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/explore/tags/localarchitecturebureau/" target="_blank"
+                    class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
+                    <img src="{{ asset('svg/LAB MEDIA.png') }}" class="w-100 h-100">
+                </a>
+            </div>
         </div>
         <div class="small-box project" id="slide-3-project-3">
-            <a href="{{ route('project', 3) }}">
+            <a href="{{ route('project', 23) }}">
                 <div class="carousel slide h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
@@ -87,7 +95,7 @@
             </a>
         </div>
         <div class="small-box project" id="slide-3-project-4">
-            <a href="{{ route('project', 4) }}">
+            <a href="{{ route('project', 24) }}">
                 <div class="carousel slide h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
@@ -107,7 +115,7 @@
             </a>
         </div>
         <div class="small-box project" id="slide-3-project-5">
-            <a href="{{ route('project', 5) }}">
+            <a href="{{ route('project', 25) }}">
                 <div class="carousel slide h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
@@ -127,7 +135,7 @@
             </a>
         </div>
         <div class="small-box project" id="slide-3-project-6">
-            <a href="{{ route('project', 6) }}">
+            <a href="{{ route('project', 26) }}">
                 <div class="carousel slide h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
@@ -146,22 +154,22 @@
                 </div>
             </a>
         </div>
-        <div class="brand" id="slide-3-brand">
+        <div class="brand" id="slide-2-brand">
             <div>
                 <a href="{{ route('about') }}"
                     class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                    <img src="{{ asset('storage/images/LOGO.png') }}" class="img-website-name">
+                    <img src="{{ asset('svg/LAB LOGO.png') }}" class="w-100 h-100">
                 </a>
             </div>
             <div>
                 <a href="{{ route('news') }}"
                     class="w-100 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                    <img src="{{ asset('storage/images/NEWS.png') }}" class="img-website-news">
+                    <img src="{{ asset('svg/LAB NEWS.png') }}" class="w-100 h-100">
                 </a>
             </div>
         </div>
         <div class="small-box project" id="slide-3-project-7">
-            <a href="{{ route('project', 7) }}">
+            <a href="{{ route('project', 27) }}">
                 <div class="carousel slide h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
@@ -181,7 +189,7 @@
             </a>
         </div>
         <div class="small-box project" id="slide-3-project-8">
-            <a href="{{ route('project', 8) }}">
+            <a href="{{ route('project', 28) }}">
                 <div class="carousel slide h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">
@@ -201,7 +209,7 @@
             </a>
         </div>
         <div class="small-box project" id="slide-3-project-9">
-            <a href="{{ route('project', 9) }}">
+            <a href="{{ route('project', 29) }}">
                 <div class="carousel slide h-100" data-ride="carousel">
                     <div class="carousel-inner h-100">
                         <div class="carousel-item active h-100">

@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', 'AppController@index')->name('/');
 Route::get('/about', 'AppController@about')->name('about');
 Route::get('/news-update', 'AppController@news')->name('news');
@@ -32,7 +33,8 @@ Route::prefix('admin')->namespace('Admin')->middleware(['auth'])->group(function
 	Route::get('/home', 'HomeController@index')->name('home');
 
 	Route::resource('/images', 'ImageController', ['except' => ['create', 'show', 'edit', 'update']]);
-	Route::resource('/pages', 'PageController');
+	Route::resource('/pages', 'PageController', ['except' => 'update']);
+	Route::put('/pages/{page}/pageDescriptions/{pageDescription}', 'PageDescriptionController@update')->name('pageDescriptions.update');
 	Route::post('/slides/update-slide', 'SlideController@updateSlide')->name('slides.update_slide');
 
 	Route::put('/slides/update', 'SlideController@update')->name('slides.update');

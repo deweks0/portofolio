@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => 'Project '. $page->id])
+@extends('layouts.app', ['title' => 'Project Details'])
 
 @section('content')
 @include('layouts.headers.cards')
@@ -9,16 +9,12 @@
         <div class="col">
             <div class="card shadow">
                 <div class="card-header border-0 d-flex justify-content-between align-items-center">
-                    <h3 class="mb-0">Project {{ $page->id }}</h3>
-
-                    <a href="{{ route('projectDetails.create', $page) }}" class="btn btn-primary">
-                        Add Project Detail
-                    </a>
+                    <h3 class="mb-0">Project Details | {{ $page->title }}</h3>
                 </div>
                 <hr class="my-1">
                 <div class="card-body">
                     @if (request()->session()->has('message'))
-                    <div class="alert {{ session()->get('alert-class') }} alert-dismissible fade show" role="alert">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
                         <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
                         <span class="alert-inner--text">
                             {{ session()->get('message') }}
@@ -28,54 +24,56 @@
                         </button>
                     </div>
                     @endif
-                    @forelse ($page->projectDetails as $key => $projectDetail)
-                    <form action="{{ route('projectDetails.destroy', [$page, $projectDetail]) }}" method="POST"
-                        id="delete-project-{{$projectDetail->id}}">
-                        @csrf
-                        @method('DELETE')
-                    </form>
-                    <form action="{{ route('projectDetails.update', [$page, $projectDetail]) }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <div class="border card-body mb-4">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h4>Project Detail {{ $key + 1 }}</h4>
-                                <button type="submit" class="btn btn-success">Save</button>
-                                <a href="{{ route('projectDetails.destroy', [$page, $projectDetail]) }}" onclick="event.preventDefault();
-                                document.getElementById('delete-project-{{$projectDetail->id}}').submit();"
-                                    class="btn btn-danger">Delete</a>
-                            </div>
-                            <hr class="my-3">
-                            <div class="d-flex justify-content-between">
-                                <div class="w-100 mr-4">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <h5 class="mr-3 mb-0">Slide Image</h5>
-                                        <a href="{{ route('projectDetails.edit_image', [$page, $projectDetail]) }}"
-                                            class="btn btn-sm btn-primary">
-                                            Change Image
-                                        </a>
-                                    </div>
 
-                                    <img src="{{ asset('storage/'.$projectDetail->image->src) }}" class="w-100 h-150px">
-                                </div>
-                                <div class="w-100 mr-4">
-                                    <h5 class="mb-3">Left Description</h5>
-                                    <textarea name="left_description" id="left_description" class="form-control"
-                                        rows="10">{{ $projectDetail->left_description }}</textarea>
-                                </div>
-                                <div class="w-100">
-                                    <h5 class="mb-3">Right Description</h5>
-                                    <textarea name="right_description" id="right_description" class="form-control"
-                                        rows="10">{{ $projectDetail->right_description }}</textarea>
-                                </div>
-                            </div>
+                    <div class="d-flex flex-column border mb-3 rounded card-body">
+                        <div class="d-flex mb-4">
+                            <h4 class="mr-3 mb-0">Slider Images</h4>
+                            <a href="{{ route('pages.choose_image', $page->id) }}" class="btn btn-sm btn-primary">Choose
+                                Image</a>
                         </div>
-                    </form>
-                    @empty
-                    <div class="border card-body">
-                        <span class="text-danger">Project detail is empty!</span>
+
+                        <hr class="m-0 border">
+
+                        <div class="d-flex flex-wrap mt-3">
+                            @forelse ($page->images as $image)
+                            <div class="w-25 mr-2 mb-2">
+                                <img src="{{ asset('storage/'.$image->src) }}" class="w-100 h-150px rounded">
+                            </div>
+                            @empty
+                            <div class="text-red text-sm font-weight-bold">Slider image is empty!</div>
+                            @endforelse
+                        </div>
                     </div>
-                    @endforelse
+
+                    <div class="border card-body">
+                        <form
+                            action="{{ route('pageDescriptions.update', [$page->id, $page->pageDescriptions->where('description_type', 'left')->first()->id ]) }}"
+                            method="POST">
+                            @csrf
+                            @method('PUT')
+                            <div class="form-group">
+                                <label for="description">Left Description</label>
+                                <textarea name="description[description]" id="description" class="form-control"
+                                    cols="30"
+                                    rows="15">{{ $page->pageDescriptions->where('description_type', 'left')->first()->description }}</textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success">Save</button>
+                        </form>
+
+                        <form
+                            action="{{ route('pageDescriptions.update', [$page->id, $page->pageDescriptions->where('description_type', 'right')->first()->id ]) }}"
+                            method="POST">
+                            @csrf
+                            @method('PUT')
+                            <div class="form-group mt-3">
+                                <label for="description">Right Description</label>
+                                <textarea name="description[description]" id="description" class="form-control"
+                                    cols="30"
+                                    rows="15">{{ $page->pageDescriptions->where('description_type', 'right')->first()->description }}</textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success">Save</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

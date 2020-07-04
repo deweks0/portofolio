@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="keywords" content="Architecture , LAB, Local Architecture Bureau, Tan Tik Lam, Gemawang Swaribathoro">
+    <meta name="title" content="{{ $title }}">
+    <meta name="description"
+        content="LAB works on a wide range architecture projects, from medium to large scale with interest to Public, Commercial & Private uses. LAB covers a think-tank process, idea development and research-based study to implementation.">
+    <meta name="author" content="LAB | Local Architecture Bureau">
 
     <title>{{ $title }}</title>
 
@@ -24,37 +29,25 @@
     <!-- JS -->
     @stack('js')
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
     <script>
-        $('.carousel').carousel({
-            interval: 3000
-        });
+        window.addEventListener('load', function () {
+            $('.carousel').carousel('pause');
 
-        $('.carousel').carousel('cycle');
+            $('#home-slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                directionNav: true,
+                slideshow: false,
+                customDirectionNav: $(".custom-navigation a"), 
+            });
 
-        $('#home-slider').flexslider({
-            animation: "slide",
-            controlNav: false,
-            directionNav: true,
-            slideshow: false,
-            customDirectionNav: $(".custom-navigation a"), 
-        });
-
-        $('#detail-slider').flexslider({
-            animation: "slide",
-            controlNav: false,
-            directionNav: true,
-            slideshow: false,
-            customDirectionNav: $(".custom-navigation a"), 
-        });
-
-        $('#about-slider').flexslider({
-            animation: "slide",
-            controlNav: true,
-            directionNav: true,
-            slideshow: false,
-            customDirectionNav: $(".custom-navigation a"), 
+            $('#about-slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                directionNav: true,
+                slideshow: true,
+                customDirectionNav: $(".custom-navigation a"), 
+            });
         });
     </script>
 </body>

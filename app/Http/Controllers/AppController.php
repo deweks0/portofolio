@@ -10,35 +10,20 @@ class AppController extends Controller
 {
     public function index()
     {
-        $images = Page::findOrFail(10)->load('images')->images;
+        $images = Page::where('title', 'LIKE', '%home%')->first()->load('images')->images;
         $slideOne = Slide::with('images')->where('slider_id', 1)->get();
         $slideTwo = Slide::with('images')->where('slider_id', 2)->get();
         $slideThree = Slide::with('images')->where('slider_id', 3)->get();
+        $randomSlide = collect([
+            'main.partials.slide_1',
+            'main.partials.slide_2',
+            'main.partials.slide_3'
+        ]);
 
         foreach (Slide::where('name', 'LIKE', '%' . 'project' . '%')->get() as $slide) {
             if (count($slide->images) === 0) {
                 abort(500, 'Image Not Set');
             }
-        }
-
-        if (now()->second <= 20) {
-            $randomSlide = collect([
-                'main.partials.slide_1',
-                'main.partials.slide_2',
-                'main.partials.slide_3'
-            ]);
-        } else if (now()->second >= 21 && now()->second <= 40) {
-            $randomSlide = collect([
-                'main.partials.slide_2',
-                'main.partials.slide_1',
-                'main.partials.slide_3'
-            ]);
-        } else {
-            $randomSlide = collect([
-                'main.partials.slide_3',
-                'main.partials.slide_2',
-                'main.partials.slide_1'
-            ]);
         }
 
         return view('main.index', compact(
@@ -52,25 +37,26 @@ class AppController extends Controller
 
     public function about()
     {
-        $page = Page::find(11)->load('images');
+        $page = Page::where('title', 'LIKE', '%about%')->first()->load('images');
+        $imagePerSlide = count($page->images) / 3;
 
         if (count($page->images) === 0) {
             abort(500, 'Image Not Set');
         }
 
-        return view('main.about', compact('page'));
+        return view('main.about', compact('page', 'imagePerSlide'));
     }
 
     public function inquiries()
     {
-        $page = Page::find(13);
+        $page = Page::where('title', 'LIKE', '%inquiries%')->first();
 
         return view('main.inquiries', compact('page'));
     }
 
     public function news()
     {
-        $page = Page::find(12);
+        $page = Page::where('title', 'LIKE', '%news%')->first();
 
         return view('main.news', compact('page'));
     }

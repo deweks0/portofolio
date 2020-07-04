@@ -7,6 +7,7 @@ use App\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Spatie\ImageOptimizer\OptimizerChainFactory;
+use ImageOptimizer;
 
 class ImageController extends Controller
 {
@@ -33,9 +34,6 @@ class ImageController extends Controller
 
         Image::create(['src' => $path]);
 
-        $optimizerChain = OptimizerChainFactory::create();
-        $optimizerChain->optimize(public_path('storage/'.$path));
-        session()->flash('message', 'Image successfully uploaded!');
         session()->flash('alert-class', 'alert-success');
 
         return redirect(route('images.index'));

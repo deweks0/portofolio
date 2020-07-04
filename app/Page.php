@@ -17,4 +17,9 @@ class Page extends Model
     {
         return $this->hasMany(ProjectDetail::class);
     }
+
+    public function pageDescriptions()
+    {
+        return $this->hasMany(PageDescription::class);
+    }
 }

@@ -31,17 +31,18 @@ require('./jquery.flexslider');
 // const app = new Vue({
 //     el: '#app',
 // });
+if (typeof randomDuration !== 'undefined') {
+    setInterval(function () {
+        randomBoxSlideOne();
+        randomBoxSlideOne();
 
-setInterval(function () {
-    randomBoxSlideOne();
-    randomBoxSlideOne();
+        randomBoxSlideTwo();
+        randomBoxSlideTwo();
 
-    randomBoxSlideTwo();
-    randomBoxSlideTwo();
-
-    randomBoxSlideThree();
-    randomBoxSlideThree();
-}, randomDuration);
+        randomBoxSlideThree();
+        randomBoxSlideThree();
+    }, randomDuration);
+}
 
 function randomBoxSlideOne() {
     let slideOneProjectNumber = Math.round(Math.random() * 10);
@@ -90,3 +91,31 @@ function randomBoxSlideThree() {
         box2.toggleClass('big-box').toggleClass('small-box');
     }
 }
+
+$(document).ready(function () {
+    let slideInfo = document.getElementById('slide-info');
+    let prevBtn = document.getElementById('btn-prev');
+    let nextBtn = document.getElementById('btn-next');
+
+    $('#detail-slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        directionNav: true,
+
+        start: function () {
+            let totalSlide = $('#detail-slider').data('flexslider').count;
+            let activeSlide = $('#detail-slider').data('flexslider').currentSlide + 1;
+
+            slideInfo.textContent = `${activeSlide}/${totalSlide}`;
+        }, // Fires when the slider loads the first slide
+        before: function () {}, // Fires asynchronously with each slider animation
+        after: function () {
+            let totalSlide = $('#detail-slider').data('flexslider').count;
+            let activeSlide = $('#detail-slider').data('flexslider').currentSlide + 1;
+
+            slideInfo.textContent = `${activeSlide}/${totalSlide}`;
+        }, // Fires after each slider animation completes
+        slideshow: false,
+        customDirectionNav: $(".custom-navigation a"),
+    });
+});

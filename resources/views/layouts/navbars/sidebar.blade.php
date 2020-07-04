@@ -123,14 +123,13 @@
 
                     <div class="collapse show" id="navbar-2">
                         <ul class="nav nav-sm flex-column">
-                            @for ($i = 1; $i <= 10; $i++) <li class="nav-item">
+                            @for ($i = 1; $i <= 30; $i++) <li class="nav-item">
                                 <a class="nav-link {{ request()->is('admin/pages/'.$i) ? 'active' : '' }}"
                                     href="{{ route('pages.show', $i) }}">
                                     Project {{ $i }}
                                 </a>
                 </li>
                 @endfor
-            </ul>
         </div>
         </li>
 

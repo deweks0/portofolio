@@ -1,4 +1,4 @@
-@extends('main.app', ['title' => 'HOME'])
+@extends('main.app', ['title' => 'LAB | Local Architecture Bureau'])
 
 @section('content')
 <div class="home-container">

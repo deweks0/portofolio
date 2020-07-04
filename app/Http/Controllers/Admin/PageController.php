@@ -18,7 +18,7 @@ class PageController extends Controller
      */
     public function index()
     {
-        $page = Page::find(10);
+        $page = Page::where('title', 'LIKE', '%home%')->first();
         $images = Image::all();
         $slideOne = Slide::with('images')->where('slider_id', 1)->get();
         $slideTwo = Slide::with('images')->where('slider_id', 2)->get();
@@ -81,23 +81,6 @@ class PageController extends Controller
         return view('page.edit', compact('page'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Page  $page
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Page $page)
-    {
-        $page->update($request->all());
-
-        session()->flash('message', $page->title . ' Page successfully updated!');
-        session()->flash('alert-class', 'alert-info');
-
-        return back();
-    }
-
     public function updateImage(Page $page)
     {
         $page->images()->sync(request('images'));
@@ -105,16 +88,16 @@ class PageController extends Controller
         session()->flash('message', $page->title . ' Slider Image successfully updated!');
         session()->flash('alert-class', 'alert-info');
 
-        if ($page->id == 11) {
+        if ($page->id == 32) {
             return redirect(route('pages.about'));
         } else {
-            return redirect(route('pages.index'));
+            return redirect(route('pages.show', $page->id));
         }
     }
 
     public function deleteImage()
     {
-        $page = Page::find(11);
+        $page = Page::where('title', 'LIKE', '%about%')->first();
 
         $page->images()->detach(request('images'));
         session()->flash('alert-class', 'alert-danger');
@@ -135,9 +118,9 @@ class PageController extends Controller
 
     public function about()
     {
-        $page = Page::find(11);
+        $page = Page::where('title', 'LIKE', '%about%')->first()->load('images');
 
-        return view('page.show_main', compact('page'));
+        return view('page.show_about', compact('page'));
     }
 
     public function chooseImage(Page $page)
@@ -149,14 +132,14 @@ class PageController extends Controller
 
     public function news()
     {
-        $page = Page::find(12);
+        $page = Page::where('title', 'LIKE', '%news%')->first();
 
         return view('page.show_main', compact('page'));
     }
 
     public function inquiries()
     {
-        $page = Page::find(13);
+        $page =  Page::where('title', 'LIKE', '%inquiries%')->first();
 
         return view('page.show_main', compact('page'));
     }
