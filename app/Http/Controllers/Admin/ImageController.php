@@ -46,7 +46,7 @@ class ImageController extends Controller
                 $constraint->upsize();
             })->save(public_path('storage/' . $thumbnailPath));
         } else {
-            $thumbnail->resize(null, 1600, function ($constraint) {
+            $thumbnail->resize(null, 1200, function ($constraint) {
                 $constraint->aspectRatio();
                 $constraint->upsize();
             })->save(public_path('storage/' . $thumbnailPath));
